@@ -1,0 +1,39 @@
+@import "../common";
+
+.navigation {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $layoutNavigationHeight;
+    background-color: #1c1c1c;
+    z-index: 100;
+
+    @supports(backdrop-filter: blur(5px)) {
+        background-color: #000000e0;
+        backdrop-filter: blur(5px);
+    }
+
+
+    > nav {
+        max-width: $layoutWidth;
+        margin: 0 auto;
+        display: flex;
+        height: $layoutNavigationHeight;
+        align-items: stretch;
+
+        .spacer {
+            flex-grow: 1;
+        }
+        
+        > a {
+            padding: 0 $layoutPadding;
+            align-items: center;
+            
+            display: flex;
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "site": {
+        "title": "Kevin's Data-Toolbox",
+        "navigation": {
+            "tools": "Tools",
+            "about": "About"
+        }
+    },
+    "home": {
+        "heroPretitle": "Kevin's",
+        "heroTitle": "Data-Toolbox",
+        "heroSubtitle": "Your One-Stop-Data-Shop!"
+    },
+    "tools": {
+        "toolCategories": "Categories",
+        "toolList": "List of tools",
+        "noresults": "No results have been found.",
+        "categories": {
+            "everything": "Everything"
+        }
+    },
+    "about": {
+        "title": "About Kevin's Data-Toolbox",
+        "p1": "Kevin's Data-Toolbox is my collection of useful small tools. Feel free to look through them to see if there anything is of use to you!",
+        "p2": "There will be more tools added over time as I create them, so check back regularly to learn about new tools!",
+        "morebyme": "More By Me",
+        "visitKevinKdev": "Check out my website <1>KevinK.dev</1>!"
+        
+    },
+    "system": {
+        "notfound": "Page Not Found",
+        "language": "Language"
+    }
+}

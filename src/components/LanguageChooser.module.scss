@@ -1,0 +1,45 @@
+@import "../common";
+
+.lChooser {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: #000000e0;
+    backdrop-filter: blur(5px);
+    color: white;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .25s;
+
+    &.active {
+
+        opacity: 1;
+        pointer-events: visible;
+
+    }
+
+    > div {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        display: flex;
+        flex-direction: column;
+    }
+    
+    a {
+        align-items: center;
+        justify-content: center;
+        
+        display: flex;
+        color: inherit;
+        text-decoration: none;
+        padding: $layoutPadding;
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "tools": [
+        {
+            "name": "Test01",
+            "external": true,
+            "url": "https://kevink.dev",
+            "icon": "Smile",
+            "category": "osm",
+            "hidden": true
+        },
+        {
+            "name": "Test02",
+            "external": false,
+            "urlname": "test",
+            "icon": "Smile",
+            "category": "something",
+            "hidden": true
+        }
+    ]
+}

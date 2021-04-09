@@ -1,0 +1,34 @@
+{
+    "site": {
+        "title": "Kevins Datenkasten",
+        "navigation": {
+            "tools": "Werkzeuge",
+            "about": "Über"
+        }
+    },
+    "home": {
+        "heroPretitle": "Kevins",
+        "heroTitle": "Datenkasten",
+        "heroSubtitle": "Dein 1-Stopp-Daten-Shop!"
+    },
+    "tools": {
+        "toolCategories": "Kategorien",
+        "toolList": "Liste von Werkzeugen",
+        "noresults": "Keine Ergebnisse.",
+        "categories": {
+            "everything": "Alles"
+        }
+    },
+    "about": {
+        "title": "Über Kevins Datenkasten",
+        "p1": "Kevins Datenkasten ist meine Kollektion von kleinen, nützlichen Werkzeugen. Schau doch mal ob du was nüzliches findest!",
+        "p2": "Ich werde mehr Werkzeuge hinzufügen sobald ich diese fertig habe, also schau regelmäßig wieder rein!",
+        "morebyme": "Mehr von mir",
+        "visitKevinKdev": "Schau dir meine Website unter <1>KevinK.dev</1> an!"
+        
+    },
+    "system": {
+        "notfound": "Seite nicht gefunden",
+        "language": "Sprache"
+    }
+}

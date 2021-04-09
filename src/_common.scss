@@ -1,0 +1,36 @@
+$fontFamily: 'Open Sans', sans-serif;
+
+$colorAccent: #f58428;
+
+$layoutWidth: 1200px;
+$layoutPadding: 20px;
+$layoutNavigationHeight: 50px;
+
+@mixin layoutBox() {
+    max-width: $layoutWidth;
+    padding: 0 $layoutPadding;
+    margin: 0 auto;
+
+}
+
+.layoutBox {
+    @include layoutBox();
+}
+
+.title {
+    display: block;
+    font-weight: 800;
+    font-size: 3em;
+    padding: 20px 0;
+}
+
+.flexList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > * {
+        margin: $layoutPadding;
+    }
+}
