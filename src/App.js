@@ -9,12 +9,14 @@ import Navigation from "./components/Navigation";
 import * as styles from "./App.module.scss";
 import NotFoundPage from "./pages/NotFound";
 import ToolLoader from "./tools/ToolLoader";
+import { Trans } from "react-i18next";
 
 const HomePage = lazy(() => import('./pages/Home'));
 const ToolsPage = lazy(() => import('./pages/Tools'));
 const AboutPage = lazy(() => import('./pages/About'));
 
 function App() {
+
   return (
     <Suspense fallback="Kevin's Data-Toolbox is loading...">
       <Router>
@@ -30,6 +32,7 @@ function App() {
             </Switch>
           </Suspense>
         </div>
+        <footer className={styles.footer}>CC-BY-4.0 Kevin Kandlbinder | <a href="//kevink.dev/legal/about">Impressum</a></footer>
       </Router>
     </Suspense>
   );

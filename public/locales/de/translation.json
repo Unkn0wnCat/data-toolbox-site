@@ -29,6 +29,7 @@
     },
     "system": {
         "notfound": "Seite nicht gefunden",
-        "language": "Sprache"
+        "language": "Sprache",
+        "imprint": "Impressum"
     }
 }

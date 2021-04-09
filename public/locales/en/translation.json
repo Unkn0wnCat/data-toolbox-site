@@ -29,6 +29,7 @@
     },
     "system": {
         "notfound": "Page Not Found",
-        "language": "Language"
+        "language": "Language",
+        "imprint": "Imprint"
     }
 }
