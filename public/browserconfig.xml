@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square70x70logo src="/KDT-icon@70px.png"/>
+            <square150x150logo src="/KDT-icon@150px.png"/>
+            <square310x310logo src="/KDT-icon@310px.png"/>
+            <TileColor>#0c0c0c</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>
