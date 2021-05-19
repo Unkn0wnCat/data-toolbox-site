@@ -1,13 +1,17 @@
 @import "../common";
 
 .linkBox {
+    @include boxStyle;
+
     padding: 30px;
     color: $colorAccent;
+    width: 300px;
 
-    text-decoration: none;
-    box-shadow: 0 0 10px rgba(black, .25);
-    border-radius: 10px;
-    width: 250px;
+    margin: $layoutPadding;
+    
+    @media(prefers-color-scheme: dark) {
+        background: rgba(255, 255, 255, .05);
+    }
 
     .lbIcon {
         svg {

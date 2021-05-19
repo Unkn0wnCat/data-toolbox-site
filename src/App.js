@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -9,11 +9,12 @@ import Navigation from "./components/Navigation";
 import * as styles from "./App.module.scss";
 import NotFoundPage from "./pages/NotFound";
 import ToolLoader from "./tools/ToolLoader";
-import { Trans } from "react-i18next";
+import prerenderedLoadable from "./helpers/prerenderedLoadable";
+import {version} from "../package.json"
 
-const HomePage = lazy(() => import('./pages/Home'));
-const ToolsPage = lazy(() => import('./pages/Tools'));
-const AboutPage = lazy(() => import('./pages/About'));
+const HomePage = prerenderedLoadable(() => import('./pages/Home'));
+const ToolsPage = prerenderedLoadable(() => import('./pages/Tools'));
+const AboutPage = prerenderedLoadable(() => import('./pages/About'));
 
 function App() {
 
@@ -31,8 +32,8 @@ function App() {
               <Route path="*" component={NotFoundPage} />
             </Switch>
           </Suspense>
+          <footer className={styles.footer}>CC-BY-4.0 Kevin Kandlbinder | v{version} | <a href="//kevink.dev/legal/about">Impressum</a></footer>
         </div>
-        <footer className={styles.footer}>CC-BY-4.0 Kevin Kandlbinder | <a href="//kevink.dev/legal/about">Impressum</a></footer>
       </Router>
     </Suspense>
   );

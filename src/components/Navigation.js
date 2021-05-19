@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 import * as styles from "./Navigation.module.scss";
-import { Globe } from "react-feather";
+import { Globe } from "lucide-react";
 import LanguageChooser from "./LanguageChooser";
 
 const Navigation = () => {

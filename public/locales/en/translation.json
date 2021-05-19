@@ -16,7 +16,20 @@
         "toolList": "List of tools",
         "noresults": "No results have been found.",
         "categories": {
-            "everything": "Everything"
+            "everything": "Everything",
+            "cryptography": "Cryptography"
+        },
+        "cryptography": {
+            "common": {
+                "cleartext": "Cleartext",
+                "ciphertext": "Ciphertext"
+            },
+            "rot": {
+                "title": "ROT-N",
+                "description": "The <wikipedia>ROT-cipher</wikipedia>, also commonly referred to as the Caesar-cipher, is based on the idea of ofsetting every letter of the alphabet by a certain amount, i.e. <pre>A => +13 => N</pre>",
+                "outOfRangeWarning": "ROT only supports letters of the basic alphabet (A-Z). Numbers and accented letters are not supported and will be copied as-is!",
+                "offset": "ROT-Offset (commonly 13)"
+            }
         }
     },
     "about": {

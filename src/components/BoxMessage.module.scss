@@ -1,0 +1,59 @@
+@import "../common";
+
+@mixin boxMessageColor($baseColor) {
+    $bgColor: adjust-color($baseColor, null, null, null, null, null, 30);
+    background-color: $bgColor;
+
+    .icon > svg {
+        color: $baseColor;
+    }
+
+
+    @media(prefers-color-scheme: dark) {
+        $bgColor: adjust-color($baseColor, null, null, null, null, null, -35);
+        background-color: $bgColor;
+
+        .icon > svg {
+            color: adjust-color($baseColor, null, null, null, null, null, 5);
+        }
+    }
+}
+
+@keyframes jump {
+    0% {transform: scale(.8);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.boxMessage {
+    padding: $layoutPadding;
+    margin: $layoutPadding 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(black, .15);
+
+    display: flex;
+
+    transition: opacity .25s;
+
+    animation: jump .25s ease-in-out 1 normal both running;
+
+
+    .icon {
+        svg {
+            width: 30px;
+            height: 30px;
+        }
+        margin-right: $layoutPadding;
+    }
+
+    &.red {
+        @include boxMessageColor(#ff1c1c)
+    }
+
+    &.hideInPlace {
+        pointer-events: none;
+        opacity: 0;
+
+        animation: unset;
+    }
+}

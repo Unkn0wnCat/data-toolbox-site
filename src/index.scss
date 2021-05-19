@@ -12,6 +12,13 @@ html, body, #root {
   font-family: $fontFamily;
 }
 
+body {
+  @media(prefers-color-scheme: dark) {
+    background-color: #0c0c0c;
+    color: white;
+  }
+}
+
 a {
   color: $colorAccent;
   text-decoration: underline dotted currentColor;

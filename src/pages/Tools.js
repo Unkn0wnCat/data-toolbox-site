@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import * as icons from 'react-feather';
+import * as icons from 'lucide-react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -8,6 +8,7 @@ import * as styles from "./Tools.module.scss";
 import LinkBox from "../components/LinkBox";
 
 import { tools } from "../tools/tools.json";
+import { Helmet } from "react-helmet";
 
 const ToolsPage = () => {
     const { t } = useTranslation();
@@ -21,12 +22,14 @@ const ToolsPage = () => {
     });
 
     return ([
+        <Helmet><title>{t("tools.toolList")} | {t("site.title")}</title></Helmet>,
         <div className={styles.categoryBox}>
             <div className={styles.layoutBox}>
                 <span className={styles.title}>{t("tools.toolList")}</span>
 
                 <div className={styles.flexList}>
-                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={icons["List"]} small={true} highlight={category == null} />
+                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={icons.List} small={true} highlight={category == null} />
+                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={icons.Binary} small={true} highlight={category === "cryptography"} />
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={icons["Map"]} small={true} highlight={category === "osm"} />*/}
                 </div>
 

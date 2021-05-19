@@ -3,11 +3,13 @@ import React from "react";
 import * as styles from "./About.module.scss";
 
 import { useTranslation, Trans } from 'react-i18next';
+import { Helmet } from "react-helmet";
 
 const AboutPage = () => {
     const { t } = useTranslation();
 
     return ([
+        <Helmet><title>{t("about.title")} | {t("site.title")}</title></Helmet>,
         <div>
             <div className={styles.layoutBox}>
                 <h1>{t("about.title")}</h1>

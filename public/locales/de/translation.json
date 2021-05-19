@@ -16,7 +16,20 @@
         "toolList": "Liste von Werkzeugen",
         "noresults": "Keine Ergebnisse.",
         "categories": {
-            "everything": "Alles"
+            "everything": "Alles",
+            "cryptography": "Kryptografie"
+        },
+        "cryptography": {
+            "common": {
+                "cleartext": "Entschlüsselter Text",
+                "ciphertext": "Verschlüsselter Text"
+            },
+            "rot": {
+                "title": "ROT-N",
+                "description": "Die <wikipedia>ROT-Verschlüsselung</wikipedia>, auch oft als Caesar-Verschlüsselung bezeichnet, basiert auf der Idee, jeden Buchstaben um einen bestimmten Versatz zu verschieben, z.B. <pre>A => +13 => N</pre>",
+                "outOfRangeWarning": "ROT unterstützt nur Buchstaben des Grundalphabets (A-Z). Nummern und Umlaute werden nicht unterstützt und unverschlüsselt kopiert!",
+                "offset": "ROT-Versatz (oftmals 13)"
+            }
         }
     },
     "about": {

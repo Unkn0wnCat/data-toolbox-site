@@ -9,12 +9,13 @@
             "hidden": true
         },
         {
-            "name": "Test02",
+            "name": "ROT-N",
             "external": false,
-            "urlname": "test",
-            "icon": "Smile",
-            "category": "something",
-            "hidden": true
+            "urlname": "rot",
+            "icon": "PlusSquare",
+            "category": "cryptography",
+            "hidden": false,
+            "keywords": "rot, rot-n, caesar, rotation, cryptography, encryption, decryption"
         }
     ]
 }

@@ -13,8 +13,53 @@ $layoutNavigationHeight: 50px;
 
 }
 
+@mixin boxStyle {
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(black, .25);
+    border: none;
+    border-radius: 10px;
+    background: none;
+    padding: $layoutPadding;
+    font: inherit;
+    color: inherit;
+    margin: $layoutPadding 0;
+
+    @media(prefers-color-scheme: dark) {
+        background: rgba(255, 255, 255, .05);
+    }
+}
+
+@mixin formStyles() {
+    input[type=text], input[type=password], textarea, input[type=number] {
+        @include boxStyle;
+            
+        display: block;
+
+        &.center {
+            margin: $layoutPadding auto;
+        }
+    }
+
+    label {
+        display: block;
+        
+        margin-top: $layoutPadding;
+        margin-bottom: (-$layoutPadding + 5px);
+
+        &.center {
+            text-align: center;
+        }
+    }
+
+    textarea {
+        width: 100%;
+        display: block;
+    }
+}
+
 .layoutBox {
     @include layoutBox();
+    @include formStyles();
 }
 
 .title {
