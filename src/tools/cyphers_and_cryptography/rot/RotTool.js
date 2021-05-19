@@ -52,7 +52,7 @@ const RotTool = () => {
     }, [input, output, reversed, offset])
     
     return (
-        <div>
+        <main>
             <Helmet>
                 <title>{t("tools.cryptography.rot.title")} | {t("site.title")}</title>
                 <meta name="keywords" content="ROT, encryption, decryption, verschlüsselung, entschlüsselung, ROT-13, Caesar-cipher, cipher, caesar, cäsar-chiffre, tool" />
@@ -73,7 +73,7 @@ const RotTool = () => {
                 <label for="rot-output">{t("tools.cryptography.common.ciphertext")}</label>
                 <textarea id="rot-output" placeholder={t("tools.cryptography.common.ciphertext")} onChange={(e) => {setReversed(true); setOutput(e.currentTarget.value.toUpperCase());}} value={output}></textarea>
             </div>
-        </div>
+        </main>
     )
 }
 

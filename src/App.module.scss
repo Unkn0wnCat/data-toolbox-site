@@ -11,7 +11,7 @@
         flex-shrink: 0;
     }
 
-    > div {
+    > div, > main {
         flex-grow: 1;
     }
 }

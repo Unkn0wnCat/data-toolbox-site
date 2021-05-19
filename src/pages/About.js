@@ -10,7 +10,7 @@ const AboutPage = () => {
 
     return ([
         <Helmet><title>{t("about.title")} | {t("site.title")}</title></Helmet>,
-        <div>
+        <main>
             <div className={styles.layoutBox}>
                 <h1>{t("about.title")}</h1>
 
@@ -22,7 +22,7 @@ const AboutPage = () => {
 
                 <p><Trans i18nKey={"about.visitKevinKdev"}> <a href="https://kevink.dev"> </a> </Trans></p>
             </div>
-        </div>
+        </main>
     ]);
 }
 

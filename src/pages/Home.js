@@ -19,7 +19,7 @@ const HomePage = () => {
                 <span className={styles.heroSubtitle}>{t("home.heroSubtitle")}</span>
             </div>
         </div>,
-        <div className={styles.categoryBox}>
+        <main className={styles.categoryBox}>
             <div className={styles.layoutBox}>
                 <span className={styles.title}>{t("tools.toolCategories")}</span>
 
@@ -29,7 +29,7 @@ const HomePage = () => {
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={Map} />*/}
                 </div>
             </div>
-        </div>
+        </main>
     ]);
 }
 

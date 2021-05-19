@@ -23,7 +23,7 @@ const ToolsPage = () => {
 
     return ([
         <Helmet><title>{t("tools.toolList")} | {t("site.title")}</title></Helmet>,
-        <div className={styles.categoryBox}>
+        <main className={styles.categoryBox}>
             <div className={styles.layoutBox}>
                 <span className={styles.title}>{t("tools.toolList")}</span>
 
@@ -41,7 +41,7 @@ const ToolsPage = () => {
                     {toolList.length === 0 ? <span>{t("tools.noresults")}</span> : null}
                 </div>
             </div>
-        </div>
+        </main>
     ]);
 }
 

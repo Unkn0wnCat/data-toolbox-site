@@ -11,12 +11,12 @@ const NotFoundPage = () => {
 
     return ([
         <Helmet><title>404: {t("system.notfound")}</title></Helmet>,
-        <div>
+        <main>
             <div className={styles.layoutBox}>
                 <h1>404: {t("system.notfound")} <Frown/></h1>
 
             </div>
-        </div>
+        </main>
     ]);
 }
 

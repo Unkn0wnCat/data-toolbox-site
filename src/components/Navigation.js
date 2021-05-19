@@ -13,16 +13,16 @@ const Navigation = () => {
     const [langChooserActive, setLangChooserActive] = useState(false);
 
     return (
-        <div className={styles.navigation}>
+        <header className={styles.navigation}>
             <nav>
                 <Link to={"/"}>{t("site.title")}</Link>
                 <span className={styles.spacer}></span>
                 <Link to={"/tools"}>{t("site.navigation.tools")}</Link>
                 <Link to={"/about"}>{t("site.navigation.about")}</Link>
-                <Link to={"#"} onClick={() => {setLangChooserActive(true)}}><Globe/></Link>
+                <Link to={"#"} onClick={() => {setLangChooserActive(true)}} title="Change Language"><Globe/></Link>
                 <LanguageChooser active={langChooserActive} onDone={() => {setLangChooserActive(false)}} />
             </nav>
-        </div>
+        </header>
     );
 }
 
