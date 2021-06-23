@@ -4,20 +4,34 @@
     @include boxStyle;
 
     padding: 30px;
-    color: $colorAccent;
     width: 300px;
 
     margin: $layoutPadding;
+
+    background-color: transparent;
+    box-shadow: none;
     
     @media(prefers-color-scheme: dark) {
-        background: rgba(255, 255, 255, .05);
+        //background: rgba(5, 4, 4, 0.05);
+
+        background-color: transparent;
     }
 
     .lbIcon {
+        width: 60px;
+        height: 60px;
+
+
         svg {
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
         }
+        color: $colorAccent;
+
+        border-radius: 100%;
+
+        background-color: rgba(grey, .07);
 
         margin-bottom: 10px;
     }
@@ -28,8 +42,9 @@
     }
 
     &.highlight {
-        background-color: $colorAccent;
-        color: white;
+        /*background-color: $colorAccent;*/
+        color: $colorAccent;
+        /*color: white;*/
     }
 
     &.small {
@@ -42,10 +57,11 @@
 
         .lbIcon {
             height: 25px;
+            width: 25px;
             svg {
-                width: 20px;
-                height: 20px;
-                margin: 2.5px;
+                width: 15px;
+                height: 15px;
+                margin: 5px;
             }
 
             margin-bottom: 0;
