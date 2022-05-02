@@ -16,6 +16,15 @@
             "category": "cryptography",
             "hidden": false,
             "keywords": "rot, rot-n, caesar, rotation, cryptography, encryption, decryption"
+        },
+        {
+            "name": "Base64",
+            "external": false,
+            "urlname": "base64",
+            "icon": "Binary",
+            "category": "cryptography",
+            "hidden": false,
+            "keywords": "binary, base64, base, 64, cryptography, encryption, decryption"
         }
     ]
 }
