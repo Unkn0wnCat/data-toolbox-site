@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
 
+
+enum events {
+  updateAvailable
+}
+
+type Event = {
+    type: events
+}
+
 let eventListeners: Map<events, ((ev: Event) => void)[]> = new Map<events, ((ev: Event) => void)[]>();
 
 let pendingUpdate = false;
@@ -16,14 +25,6 @@ navigator.serviceWorker.getRegistration().then((reg) => {
     });
   }
 })
-
-enum events {
-  updateAvailable
-}
-
-type Event = {
-  type: events
-}
 
 const broadcast = new BroadcastChannel('sw-updates');
 

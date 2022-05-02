@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AlertOctagon } from "lucide-react";
 import { useTranslation, Trans } from "react-i18next";
-import BoxMessage from "../../../components/BoxMessage";
 import * as styles from "./Base64Tool.module.scss"
 import { Helmet } from "react-helmet";
 import {Buffer} from "buffer/"
