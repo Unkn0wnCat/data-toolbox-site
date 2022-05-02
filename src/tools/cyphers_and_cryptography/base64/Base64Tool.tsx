@@ -13,11 +13,13 @@ const Base64Tool = () => {
 
     useEffect(() => {
         if(!reversed) {
+            // @ts-ignore
             const buf = new Buffer.from(input)
             setOutput(buf.toString("base64"))
         }
 
         if(reversed) {
+            // @ts-ignore
             const buf = new Buffer.from(output, "base64")
             setInput(buf.toString("utf-8"))
         }

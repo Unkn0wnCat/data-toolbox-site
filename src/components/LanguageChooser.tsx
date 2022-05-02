@@ -6,7 +6,12 @@ import { useTranslation } from 'react-i18next';
 
 import * as styles from "./LanguageChooser.module.scss";
 
-const LanguageChooser = (props) => {
+type Props = {
+    active?: boolean
+    onDone: () => void
+}
+
+const LanguageChooser = (props: Props) => {
     const { t, i18n } = useTranslation();
 
     return ReactDOM.createPortal(

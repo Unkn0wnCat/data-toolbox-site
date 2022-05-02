@@ -22,9 +22,9 @@ const RotTool = () => {
         let max = 122; // This is z
         let range = max - min; // The length of the alphabet
 
-        let rotInput = reversed ? output.toLowerCase() : input.toLowerCase();
+        let rotInputStr = reversed ? output.toLowerCase() : input.toLowerCase();
 
-        rotInput = rotInput.split('');
+        let rotInput = rotInputStr.split('');
         
         let hasOutOfRange = false;
 
@@ -46,9 +46,9 @@ const RotTool = () => {
 
         setOutOfRangeWarning(hasOutOfRange);
 
-        rotOut = rotOut.join('').toUpperCase();
+        let rotOutStr = rotOut.join('').toUpperCase();
 
-        reversed ? setInput(rotOut) : setOutput(rotOut)
+        reversed ? setInput(rotOutStr) : setOutput(rotOutStr)
     }, [input, output, reversed, offset])
     
     return (
@@ -62,7 +62,7 @@ const RotTool = () => {
 
                 <p><Trans i18nKey={"tools.cryptography.rot.description"} components={{wikipedia: <a href="https://en.wikipedia.org/wiki/ROT13">xxx</a>, pre: <pre/>}} /></p>
 
-                <BoxMessage icon={AlertOctagon} color="red" hideInPlace={!outOfRangeWarning}>{t("tools.cryptography.rot.outOfRangeWarning")}</BoxMessage>
+                <BoxMessage icon={<AlertOctagon/>} color="red" hideInPlace={!outOfRangeWarning}>{t("tools.cryptography.rot.outOfRangeWarning")}</BoxMessage>
 
                 <label htmlFor="rot-input">{t("tools.cryptography.common.cleartext")}</label>
                 <textarea id="rot-input" placeholder={t("tools.cryptography.common.cleartext")} onChange={(e) => {setReversed(false); setInput(e.currentTarget.value.toUpperCase());}} value={input}></textarea>

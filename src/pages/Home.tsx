@@ -19,13 +19,13 @@ const HomePage = () => {
                 <span className={styles.heroSubtitle}>{t("home.heroSubtitle")}</span>
             </div>
         </div>
-        <main className={styles.categoryBox}>
+        <main>
             <div className={styles.layoutBox}>
                 <span className={styles.title}>{t("tools.toolCategories")}</span>
 
                 <div className={styles.flexList}>
-                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={List} />
-                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={Binary} />
+                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={<List/>} />
+                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<Binary/>} />
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={Map} />*/}
                 </div>
             </div>
