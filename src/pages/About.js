@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet";
 const AboutPage = () => {
     const { t } = useTranslation();
 
-    return (<>
+    return <>
         <Helmet><title>{t("about.title")} | {t("site.title")}</title></Helmet>
         <main>
             <div className={styles.layoutBox}>
@@ -23,7 +23,7 @@ const AboutPage = () => {
                 <p><Trans i18nKey={"about.visitKevinKdev"}> <a href="https://kevink.dev"> </a> </Trans></p>
             </div>
         </main>
-        </>);
+        </>;
 }
 
 export default AboutPage;

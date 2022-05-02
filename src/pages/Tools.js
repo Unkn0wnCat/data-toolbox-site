@@ -21,7 +21,7 @@ const ToolsPage = () => {
         return !tool.hidden && (category == null || tool.category === category);
     });
 
-    return (<>
+    return <>
         <Helmet><title>{t("tools.toolList")} | {t("site.title")}</title></Helmet>
         <main className={styles.categoryBox}>
             <div className={styles.layoutBox}>
@@ -43,7 +43,7 @@ const ToolsPage = () => {
             </div>
         </main>
         </>
-    );
+    ;
 }
 
 export default ToolsPage;

@@ -9,15 +9,15 @@ import { Helmet } from "react-helmet";
 const NotFoundPage = () => {
     const { t } = useTranslation();
 
-    return ([
-        <Helmet><title>404: {t("system.notfound")}</title></Helmet>,
+    return <>
+        <Helmet><title>404: {t("system.notfound")}</title></Helmet>
         <main>
             <div className={styles.layoutBox}>
                 <h1>404: {t("system.notfound")} <Frown/></h1>
 
             </div>
         </main>
-    ]);
+    </>;
 }
 
 export default NotFoundPage;

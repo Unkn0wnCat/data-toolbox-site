@@ -10,7 +10,7 @@ import { Helmet } from "react-helmet";
 const HomePage = () => {
     const { t } = useTranslation();
 
-    return (<>
+    return <>
         <Helmet><title>Home | {t("site.title")}</title></Helmet>
         <div className={styles.heroBox}>
             <div className={styles.layoutBox}>
@@ -30,7 +30,7 @@ const HomePage = () => {
                 </div>
             </div>
         </main>
-    </>);
+    </>;
 }
 
 export default HomePage;

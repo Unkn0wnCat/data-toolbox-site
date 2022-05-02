@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -24,13 +24,18 @@ function App() {
         <div className={styles.appContainer}>
           <Navigation/>
           <Suspense fallback="Kevin's Data-Toolbox is loading...">
-            <Switch>
-              <Route path="/about" component={AboutPage} />
-              <Route path="/tools/:category?" component={ToolsPage} />
-              <Route path="/tool/:tool" component={ToolLoader} />
-              <Route path="/" exact component={HomePage} />
-              <Route path="*" component={NotFoundPage} />
-            </Switch>
+            <Routes>
+              <Route path="/" element={<HomePage/>} />
+
+              <Route path="/tools" element={<ToolsPage/>} />
+              <Route path="/tools/:category" element={<ToolsPage/>} />
+
+              <Route path="/tool/:tool" element={<ToolLoader/>} />
+
+              <Route path="/about" element={<AboutPage/>} />
+              
+              <Route path="*" element={<NotFoundPage/>} />
+            </Routes>
           </Suspense>
           <footer className={styles.footer}>CC-BY-4.0 Kevin Kandlbinder | v{version} | <a href="//kevink.dev/legal/about">Impressum</a></footer>
         </div>
