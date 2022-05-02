@@ -64,13 +64,13 @@ const RotTool = () => {
 
                 <BoxMessage icon={AlertOctagon} color="red" hideInPlace={!outOfRangeWarning}>{t("tools.cryptography.rot.outOfRangeWarning")}</BoxMessage>
 
-                <label for="rot-input">{t("tools.cryptography.common.cleartext")}</label>
+                <label htmlFor="rot-input">{t("tools.cryptography.common.cleartext")}</label>
                 <textarea id="rot-input" placeholder={t("tools.cryptography.common.cleartext")} onChange={(e) => {setReversed(false); setInput(e.currentTarget.value.toUpperCase());}} value={input}></textarea>
 
-                <label for="rot-offset" className={styles.center}>{t("tools.cryptography.rot.offset")}</label>
+                <label htmlFor="rot-offset" className={styles.center}>{t("tools.cryptography.rot.offset")}</label>
                 <input type="number" id="rot-offset" value={offset} onChange={(e) => {setOffset(parseInt(e.currentTarget.value))}} className={styles.center} />
 
-                <label for="rot-output">{t("tools.cryptography.common.ciphertext")}</label>
+                <label htmlFor="rot-output">{t("tools.cryptography.common.ciphertext")}</label>
                 <textarea id="rot-output" placeholder={t("tools.cryptography.common.ciphertext")} onChange={(e) => {setReversed(true); setOutput(e.currentTarget.value.toUpperCase());}} value={output}></textarea>
             </div>
         </main>

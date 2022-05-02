@@ -35,10 +35,10 @@ const Base64Tool = () => {
 
                 <p><Trans i18nKey={"tools.cryptography.base64.description"} components={{wikipedia: <a href="https://en.wikipedia.org/wiki/Base64">xxx</a>, pre: <pre/>}} /></p>
 
-                <label for="base64-input">{t("tools.cryptography.common.cleartext")}</label>
+                <label htmlFor="base64-input">{t("tools.cryptography.common.cleartext")}</label>
                 <textarea id="base64-input" placeholder={t("tools.cryptography.common.cleartext")} onChange={(e) => {setReversed(false); setInput(e.currentTarget.value);}} value={input}></textarea>
 
-                <label for="base64-output">{t("tools.cryptography.common.ciphertext")}</label>
+                <label htmlFor="base64-output">{t("tools.cryptography.common.ciphertext")}</label>
                 <textarea id="base64-output" placeholder={t("tools.cryptography.common.ciphertext")} onChange={(e) => {setReversed(true); setOutput(e.currentTarget.value);}} value={output}></textarea>
             </div>
         </main>
