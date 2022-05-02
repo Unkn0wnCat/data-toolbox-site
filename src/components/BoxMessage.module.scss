@@ -1,7 +1,7 @@
 @import "../common";
 
 @mixin boxMessageColor($baseColor) {
-    $bgColor: adjust-color($baseColor, null, null, null, null, null, 30);
+    $bgColor: adjust-color($baseColor, $lightness: 30);
     background-color: $bgColor;
 
     .icon > svg {
@@ -10,11 +10,11 @@
 
 
     @media(prefers-color-scheme: dark) {
-        $bgColor: adjust-color($baseColor, null, null, null, null, null, -35);
+        $bgColor: adjust-color($baseColor, $lightness:  -35);
         background-color: $bgColor;
 
         .icon > svg {
-            color: adjust-color($baseColor, null, null, null, null, null, 5);
+            color: adjust-color($baseColor, $lightness: 5);
         }
     }
 }
