@@ -1036,7 +1036,7 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.16.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.10.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.14.6", "@babel/runtime@^7.16.3", "@babel/runtime@^7.17.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.6", "@babel/runtime@^7.7.7", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.17.9"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.17.9.tgz#d19fbf802d01a8cb6cf053a64e472d42c434ba72"
   integrity sha512-lSiBBvodq29uShpWGNbgFdKYNiFDo5/HIYsaCEY9ff4sb10x9jizo2+pRrSyF4jKZCXqgzuqBOQKbUm90gQwJg==
@@ -5781,12 +5781,12 @@ i18next-http-backend@^1.2.1:
   dependencies:
     cross-fetch "3.1.5"
 
-i18next@^20.2.1:
-  version "20.6.1"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-20.6.1.tgz#535e5f6e5baeb685c7d25df70db63bf3cc0aa345"
-  integrity sha512-yCMYTMEJ9ihCwEQQ3phLo7I/Pwycf8uAx+sRHwwk5U9Aui/IZYgQRyMqXafQOw5QQ7DM1Z+WyEXWIqSuJHhG2A==
+i18next@^21.6.16:
+  version "21.6.16"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-21.6.16.tgz#8cff8c3ba2ffaf8438a8c83fe284083f15cf3941"
+  integrity sha512-xJlzrVxG9CyAGsbMP1aKuiNr1Ed2m36KiTB7hjGMG2Zo4idfw3p9THUEu+GjBwIgEZ7F11ZbCzJcfv4uyfKNuw==
   dependencies:
-    "@babel/runtime" "^7.12.0"
+    "@babel/runtime" "^7.17.2"
 
 iconv-lite@0.4.24:
   version "0.4.24"
@@ -7222,10 +7222,10 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-lucide-react@^0.15.16:
-  version "0.15.34"
-  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.15.34.tgz#d507be65ba7373ab4e2764607d6cdf5dea89bd5c"
-  integrity sha512-gCw70oPI/ZSjlvP4uIFde3b1osBSfAVSH732A/At9suSmDbckbcCcnV6tv0KZtfIUq90sY+KEWFwKgEGqHLsIQ==
+lucide-react@^0.35.0:
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/lucide-react/-/lucide-react-0.35.0.tgz#73526e95fca41c9d937a949f908661b847d1fc5d"
+  integrity sha512-hxhpRRFRt9GGfgjPDDlYeTGQtW0Znj5aTUkbbdZNco0R89ClTE604GQpWOkDWNof8cWfMMlcVrw58tGdpOQKXg==
 
 lz-string@^1.4.4:
   version "1.4.4"
