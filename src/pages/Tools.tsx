@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import * as icons from 'lucide-react';
+import {Lock, Binary, List} from 'lucide-react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -28,8 +28,9 @@ const ToolsPage = () => {
                 <span className={styles.title}>{t("tools.toolList")}</span>
 
                 <div className={styles.flexList}>
-                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={<icons.List/>} small={true} highlight={category == null} />
-                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<icons.Binary/>} small={true} highlight={category === "cryptography"} />
+                    <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={<List/>} small={true} highlight={category == null} />
+                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<Lock/>} small={true} highlight={category === "cryptography"} />
+                    <LinkBox to={"/tools/encodings"} text={t("tools.categories.encodings")} icon={<Binary/>} small={true} highlight={category === "encodings"} />
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={icons["Map"]} small={true} highlight={category === "osm"} />*/}
                 </div>
 

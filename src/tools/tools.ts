@@ -23,9 +23,9 @@ const tools = [
             "external": false,
             "urlname": "base64",
             "icon": Binary,
-            "category": "cryptography",
+            "category": "encodings",
             "hidden": false,
-            "keywords": "binary, base64, base, 64, cryptography, encryption, decryption"
+            "keywords": "binary, base64, base, 64, encodings, encryption, decryption"
         }
     ]
 

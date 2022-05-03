@@ -29,19 +29,19 @@ const Base64Tool = () => {
     return (
         <main>
             <Helmet>
-                <title>{t("tools.cryptography.base64.title")} | {t("site.title")}</title>
-                <meta name="keywords" content="Base64, encryption, decryption, verschlüsselung, entschlüsselung, base, 64, binary, tool" />
+                <title>{t("tools.encodings.base64.title")} | {t("site.title")}</title>
+                <meta name="keywords" content="Base64, encoding, decoding, encoder, decoder, base, 64, binary, tool" />
             </Helmet>
             <div className={styles.layoutBox}>
-                <h1>{t("tools.cryptography.base64.title")}</h1>
+                <h1>{t("tools.encodings.base64.title")}</h1>
 
-                <p><Trans i18nKey={"tools.cryptography.base64.description"} components={{wikipedia: <a href="https://en.wikipedia.org/wiki/Base64">xxx</a>, pre: <pre/>}} /></p>
+                <p><Trans i18nKey={"tools.encodings.base64.description"} components={{wikipedia: <a href="https://en.wikipedia.org/wiki/Base64">xxx</a>, pre: <pre/>}} /></p>
 
-                <label htmlFor="base64-input">{t("tools.cryptography.common.cleartext")}</label>
-                <textarea id="base64-input" placeholder={t("tools.cryptography.common.cleartext")} onChange={(e) => {setReversed(false); setInput(e.currentTarget.value);}} value={input}></textarea>
+                <label htmlFor="base64-input">{t("tools.encodings.common.decoded")}</label>
+                <textarea id="base64-input" placeholder={t("tools.encodings.common.decoded")} onChange={(e) => {setReversed(false); setInput(e.currentTarget.value);}} value={input}></textarea>
 
-                <label htmlFor="base64-output">{t("tools.cryptography.common.ciphertext")}</label>
-                <textarea id="base64-output" placeholder={t("tools.cryptography.common.ciphertext")} onChange={(e) => {setReversed(true); setOutput(e.currentTarget.value);}} value={output}></textarea>
+                <label htmlFor="base64-output">{t("tools.encodings.common.encoded")}</label>
+                <textarea id="base64-output" placeholder={t("tools.encodings.common.encoded")} onChange={(e) => {setReversed(true); setOutput(e.currentTarget.value);}} value={output}></textarea>
             </div>
         </main>
     )

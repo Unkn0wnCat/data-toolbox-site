@@ -1,5 +1,5 @@
 import React from "react";
-import { Binary, List } from 'lucide-react';
+import { Binary, List, Lock } from 'lucide-react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -25,7 +25,8 @@ const HomePage = () => {
 
                 <div className={styles.flexList}>
                     <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={<List/>} />
-                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<Binary/>} />
+                    <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<Lock/>} />
+                    <LinkBox to={"/tools/encodings"} text={t("tools.categories.encodings")} icon={<Binary/>} />
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={Map} />*/}
                 </div>
             </div>

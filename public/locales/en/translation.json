@@ -1,58 +1,64 @@
 {
-    "site": {
-        "title": "Kevin's Data-Toolbox",
-        "navigation": {
-            "tools": "Tools",
-            "about": "About"
-        }
+  "site": {
+    "title": "Kevin's Data-Toolbox",
+    "navigation": {
+      "tools": "Tools",
+      "about": "About"
+    }
+  },
+  "home": {
+    "heroPretitle": "Kevin's",
+    "heroTitle": "Data Toolbox",
+    "heroSubtitle": "Your One-Stop-Data-Shop!"
+  },
+  "tools": {
+    "toolCategories": "Categories",
+    "toolList": "List of tools",
+    "noresults": "No results have been found.",
+    "categories": {
+      "everything": "Everything",
+      "cryptography": "Cryptography",
+      "encodings": "Encodings"
     },
-    "home": {
-        "heroPretitle": "Kevin's",
-        "heroTitle": "Data Toolbox",
-        "heroSubtitle": "Your One-Stop-Data-Shop!"
+    "cryptography": {
+      "common": {
+        "cleartext": "Cleartext",
+        "ciphertext": "Ciphertext"
+      },
+      "rot": {
+        "title": "ROT-N",
+        "description": "The <wikipedia>ROT-cipher</wikipedia>, also commonly referred to as the Caesar-cipher, is based on the idea of ofsetting every letter of the alphabet by a certain amount, i.e. <pre>A => +13 => N</pre>",
+        "outOfRangeWarning": "ROT only supports letters of the basic alphabet (A-Z). Numbers and accented letters are not supported and will be copied as-is!",
+        "offset": "ROT-Offset (commonly 13)"
+      }
     },
-    "tools": {
-        "toolCategories": "Categories",
-        "toolList": "List of tools",
-        "noresults": "No results have been found.",
-        "categories": {
-            "everything": "Everything",
-            "cryptography": "Cryptography"
+    "encodings": {
+        "common": {
+            "encoded": "Encoded",
+            "decoded": "Decoded"
         },
-        "cryptography": {
-            "common": {
-                "cleartext": "Cleartext",
-                "ciphertext": "Ciphertext"
-            },
-            "rot": {
-                "title": "ROT-N",
-                "description": "The <wikipedia>ROT-cipher</wikipedia>, also commonly referred to as the Caesar-cipher, is based on the idea of ofsetting every letter of the alphabet by a certain amount, i.e. <pre>A => +13 => N</pre>",
-                "outOfRangeWarning": "ROT only supports letters of the basic alphabet (A-Z). Numbers and accented letters are not supported and will be copied as-is!",
-                "offset": "ROT-Offset (commonly 13)"
-            },
-            "base64": {
-                "title": "Base64",
-                "description": "<wikipedia>Base64-encoding</wikipedia> is commonly used for storing arbitrary binary data in pure strings, by mapping it to 64 ASCII characters."
-            }
-        }
-    },
-    "about": {
-        "title": "About Kevin's Data-Toolbox",
-        "p1": "Kevin's Data-Toolbox is my collection of useful small tools. Feel free to look through them to see if there anything is of use to you!",
-        "p2": "There will be more tools added over time as I create them, so check back regularly to learn about new tools!",
-        "morebyme": "More By Me",
-        "visitKevinKdev": "Check out my website <1>KevinK.dev</1>!"
-        
-    },
-    "system": {
-        "notfound": "Page Not Found",
-        "language": "Language",
-        "imprint": "Imprint",
-        "errors": {
-            "toolException": {
-                "title": "The tool encountered a fatal error.",
-                "description": "The tool encountered a fatal error and was unable to complete its task. Please retry."
-            }
+        "base64": {
+          "title": "Base64",
+          "description": "<wikipedia>Base64-encoding</wikipedia> is commonly used for storing arbitrary binary data in pure strings, by mapping it to 64 ASCII characters."
         }
     }
+  },
+  "about": {
+    "title": "About Kevin's Data-Toolbox",
+    "p1": "Kevin's Data-Toolbox is my collection of useful small tools. Feel free to look through them to see if there anything is of use to you!",
+    "p2": "There will be more tools added over time as I create them, so check back regularly to learn about new tools!",
+    "morebyme": "More By Me",
+    "visitKevinKdev": "Check out my website <1>KevinK.dev</1>!"
+  },
+  "system": {
+    "notfound": "Page Not Found",
+    "language": "Language",
+    "imprint": "Imprint",
+    "errors": {
+      "toolException": {
+        "title": "The tool encountered a fatal error.",
+        "description": "The tool encountered a fatal error and was unable to complete its task. Please retry."
+      }
+    }
+  }
 }

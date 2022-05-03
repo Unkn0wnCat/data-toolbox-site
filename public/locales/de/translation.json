@@ -1,58 +1,64 @@
 {
-    "site": {
-        "title": "Kevins Datenkasten",
-        "navigation": {
-            "tools": "Werkzeuge",
-            "about": "Über"
-        }
+  "site": {
+    "title": "Kevins Datenkasten",
+    "navigation": {
+      "tools": "Werkzeuge",
+      "about": "Über"
+    }
+  },
+  "home": {
+    "heroPretitle": "Kevins",
+    "heroTitle": "Daten­kasten",
+    "heroSubtitle": "Dein 1-Stopp-Daten-Shop!"
+  },
+  "tools": {
+    "toolCategories": "Kategorien",
+    "toolList": "Liste von Werkzeugen",
+    "noresults": "Keine Ergebnisse.",
+    "categories": {
+      "everything": "Alles",
+      "cryptography": "Kryptografie",
+      "encodings": "Kodierungen"
     },
-    "home": {
-        "heroPretitle": "Kevins",
-        "heroTitle": "Daten\u00ADkasten",
-        "heroSubtitle": "Dein 1-Stopp-Daten-Shop!"
+    "cryptography": {
+      "common": {
+        "cleartext": "Entschlüsselter Text",
+        "ciphertext": "Verschlüsselter Text"
+      },
+      "rot": {
+        "title": "ROT-N",
+        "description": "Die <wikipedia>ROT-Verschlüsselung</wikipedia>, auch oft als Caesar-Verschlüsselung bezeichnet, basiert auf der Idee, jeden Buchstaben um einen bestimmten Versatz zu verschieben, z.B. <pre>A => +13 => N</pre>",
+        "outOfRangeWarning": "ROT unterstützt nur Buchstaben des Grundalphabets (A-Z). Nummern und Umlaute werden nicht unterstützt und unverschlüsselt kopiert!",
+        "offset": "ROT-Versatz (oftmals 13)"
+      }
     },
-    "tools": {
-        "toolCategories": "Kategorien",
-        "toolList": "Liste von Werkzeugen",
-        "noresults": "Keine Ergebnisse.",
-        "categories": {
-            "everything": "Alles",
-            "cryptography": "Kryptografie"
+    "encodings": {
+        "common": {
+            "encoded": "Kodiert",
+            "decoded": "Dekodiert"
         },
-        "cryptography": {
-            "common": {
-                "cleartext": "Entschlüsselter Text",
-                "ciphertext": "Verschlüsselter Text"
-            },
-            "rot": {
-                "title": "ROT-N",
-                "description": "Die <wikipedia>ROT-Verschlüsselung</wikipedia>, auch oft als Caesar-Verschlüsselung bezeichnet, basiert auf der Idee, jeden Buchstaben um einen bestimmten Versatz zu verschieben, z.B. <pre>A => +13 => N</pre>",
-                "outOfRangeWarning": "ROT unterstützt nur Buchstaben des Grundalphabets (A-Z). Nummern und Umlaute werden nicht unterstützt und unverschlüsselt kopiert!",
-                "offset": "ROT-Versatz (oftmals 13)"
-            },
-            "base64": {
-                "title": "Base64",
-                "description": "<wikipedia>Base64-Codierung</wikipedia> wird oft genutzt um beliebige Binärdaten in pure Zeichenfolgen zu schreiben, indem die Daten auf 64 ASCII-Zeichen projeziert werden."
-            }
-        }
-    },
-    "about": {
-        "title": "Über Kevins Datenkasten",
-        "p1": "Kevins Datenkasten ist meine Kollektion von kleinen, nützlichen Werkzeugen. Schau doch mal ob du was nüzliches findest!",
-        "p2": "Ich werde mehr Werkzeuge hinzufügen sobald ich diese fertig habe, also schau regelmäßig wieder rein!",
-        "morebyme": "Mehr von mir",
-        "visitKevinKdev": "Schau dir meine Website unter <1>KevinK.dev</1> an!"
-        
-    },
-    "system": {
-        "notfound": "Seite nicht gefunden",
-        "language": "Sprache",
-        "imprint": "Impressum",
-        "errors": {
-            "toolException": {
-                "title": "Ein fatales Problem ist aufgetreten.",
-                "description": "Im Werkzeug ist ein fatales Problem aufgetreten und die Aufgabe konnte nicht abgeschlossen werden. Bitte erneut versuchen."
-            }
+        "base64": {
+            "title": "Base64",
+            "description": "<wikipedia>Base64-Codierung</wikipedia> wird oft genutzt um beliebige Binärdaten in pure Zeichenfolgen zu schreiben, indem die Daten auf 64 ASCII-Zeichen projeziert werden."
         }
     }
+  },
+  "about": {
+    "title": "Über Kevins Datenkasten",
+    "p1": "Kevins Datenkasten ist meine Kollektion von kleinen, nützlichen Werkzeugen. Schau doch mal ob du was nüzliches findest!",
+    "p2": "Ich werde mehr Werkzeuge hinzufügen sobald ich diese fertig habe, also schau regelmäßig wieder rein!",
+    "morebyme": "Mehr von mir",
+    "visitKevinKdev": "Schau dir meine Website unter <1>KevinK.dev</1> an!"
+  },
+  "system": {
+    "notfound": "Seite nicht gefunden",
+    "language": "Sprache",
+    "imprint": "Impressum",
+    "errors": {
+      "toolException": {
+        "title": "Ein fatales Problem ist aufgetreten.",
+        "description": "Im Werkzeug ist ein fatales Problem aufgetreten und die Aufgabe konnte nicht abgeschlossen werden. Bitte erneut versuchen."
+      }
+    }
+  }
 }
