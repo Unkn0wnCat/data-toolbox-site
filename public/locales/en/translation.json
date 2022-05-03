@@ -40,6 +40,15 @@
         "base64": {
           "title": "Base64",
           "description": "<wikipedia>Base64-encoding</wikipedia> is commonly used for storing arbitrary binary data in pure strings, by mapping it to 64 ASCII characters."
+        },
+        "numberbase": {
+            "title": "Base Converter",
+            "description": "Convert between decimal, binary, octal and hexadecimal numbers.",
+            "decimal": "Decimal",
+            "binary": "Binary",
+            "octal": "Octal",
+            "hexadecimal": "Hexadecimal",
+            "nanWarning": "The input is not a valid number!"
         }
     }
   },

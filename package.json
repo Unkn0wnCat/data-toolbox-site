@@ -1,6 +1,6 @@
 {
   "name": "kevins-data-toolbox",
-  "version": "2.1.2",
+  "version": "2.2.0",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
@@ -34,6 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts --openssl-legacy-provider build",
+    "buildNoLegacy": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "tscss": "typed-scss-modules src --watch",

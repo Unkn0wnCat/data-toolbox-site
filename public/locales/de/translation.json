@@ -40,6 +40,15 @@
         "base64": {
             "title": "Base64",
             "description": "<wikipedia>Base64-Codierung</wikipedia> wird oft genutzt um beliebige Binärdaten in pure Zeichenfolgen zu schreiben, indem die Daten auf 64 ASCII-Zeichen projeziert werden."
+        },
+        "numberbase": {
+            "title": "Basis-Konverter",
+            "description": "Basis-Konverter konvertiert Zahlen in eine andere Basis (z.B. Binär, Hexadezimal, etc.)",
+            "decimal": "Dezimal",
+            "binary": "Binär",
+            "octal": "Oktal",
+            "hexadecimal": "Hexadezimal",
+            "nanWarning": "Die Eingabe ist keine gültige Zahl!"
         }
     }
   },

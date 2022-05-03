@@ -12,7 +12,8 @@ import { AlertOctagon } from "lucide-react";
 
 const HomePage = prerenderedLoadable(() => import('../pages/Home'));
 const RotTool = prerenderedLoadable(() => import('./cyphers_and_cryptography/rot/RotTool'));
-const Base64Tool = prerenderedLoadable(() => import('./cyphers_and_cryptography/base64/Base64Tool'));
+const Base64Tool = prerenderedLoadable(() => import('./encodings/base64/Base64Tool'));
+const NumberBaseTool = prerenderedLoadable(() => import('./encodings/numberbase/NumberBaseTool'));
 
 type ErrorBoundaryProps = {
     resetFunction: () => void
@@ -67,6 +68,9 @@ const ToolLoader = () => {
 
         case "base64":
             return <ToolErrorBoundary resetFunction={forceReset} key={key}><Base64Tool/></ToolErrorBoundary>;
+
+        case "numberbase":
+            return <ToolErrorBoundary resetFunction={forceReset} key={key}><NumberBaseTool/></ToolErrorBoundary>;
 
         default:
             return <NotFoundPage/>;

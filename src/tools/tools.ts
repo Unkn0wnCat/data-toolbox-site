@@ -1,4 +1,4 @@
-import {Smile, PlusSquare, Binary} from "lucide-react"
+import {Smile, PlusSquare, Binary, Hash} from "lucide-react"
 
 const tools = [
         {
@@ -10,7 +10,7 @@ const tools = [
             "hidden": true
         },
         {
-            "name": "ROT-N",
+            "name": "tools.cryptography.rot.title",
             "external": false,
             "urlname": "rot",
             "icon": PlusSquare,
@@ -19,13 +19,22 @@ const tools = [
             "keywords": "rot, rot-n, caesar, rotation, cryptography, encryption, decryption"
         },
         {
-            "name": "Base64",
+            "name": "tools.encodings.base64.title",
             "external": false,
             "urlname": "base64",
             "icon": Binary,
             "category": "encodings",
             "hidden": false,
-            "keywords": "binary, base64, base, 64, encodings, encryption, decryption"
+            "keywords": "binary, base64, base, 64, encodings, encoding, decoding"
+        },
+        {
+            "name": "tools.encodings.numberbase.title",
+            "external": false,
+            "urlname": "numberbase",
+            "icon": Hash,
+            "category": "encodings",
+            "hidden": false,
+            "keywords": "binary, base, base6, base10, base2, binary, hex, hexadecimal, oct, bin, dec, encodings, encoding, decoding"
         }
     ]
 

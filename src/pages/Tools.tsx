@@ -36,7 +36,7 @@ const ToolsPage = () => {
 
                 <div className={styles.flexList}>
                     {toolList.map((tool, i) => {
-                        return (<LinkBox key={"tool"+i} external={tool.external} to={(tool.external ? tool.url : "/tool/"+tool.urlname) || ""} text={tool.name} icon={<tool.icon />} />);
+                        return (<LinkBox key={"tool"+i} external={tool.external} to={(tool.external ? tool.url : "/tool/"+tool.urlname) || ""} text={t(tool.name)} icon={<tool.icon />} />);
                     })}
 
                     {toolList.length === 0 ? <span>{t("tools.noresults")}</span> : null}
