@@ -18,7 +18,7 @@ const RotTool = () => {
         let actualOffset = offset;
         if(reversed) actualOffset = -offset;
         
-        let min = 97; // This is a
+        let min = 96; // This is a
         let max = 122; // This is z
         let range = max - min; // The length of the alphabet
 
