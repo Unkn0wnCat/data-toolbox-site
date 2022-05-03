@@ -86,8 +86,6 @@ const IPv4SubnettingTool = () => {
         let subnetNum = parseInt(mySubnet);
 
 
-
-
         if(!isNaN(ipPart1Num)) setIPPart1(ipPart1Num.toString());
         if(!isNaN(ipPart2Num)) setIPPart2(ipPart2Num.toString());
         if(!isNaN(ipPart3Num)) setIPPart3(ipPart3Num.toString());
@@ -120,8 +118,8 @@ const IPv4SubnettingTool = () => {
                 setSubnetMaskBinaryString(subnetMaskBinary[0].toString(2))
                 setSubnetMask(subnetMaskBinary[0])
     
-                setFirstAddr(ipBinary & subnetMaskBinary[0])
-                setLastAddr(ipBinary | (subnetMaskBinary[0] ^ 0xffffffff))
+                setFirstAddr((ipBinary & subnetMaskBinary[0])+1)
+                setLastAddr((ipBinary | (subnetMaskBinary[0] ^ 0xffffffff)) - 1)
             }
         }
     }, [ipPart1, ipPart2, ipPart3, ipPart4, subnet])
