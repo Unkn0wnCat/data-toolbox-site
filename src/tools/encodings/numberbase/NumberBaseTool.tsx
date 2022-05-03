@@ -71,8 +71,8 @@ const NumberBaseTool = () => {
         setNanState(false)
 
         setDec(num.toString(10).replace(/\B(?=(\d{3})+(?!\d))/g, " "))
-        setBin(num.toString(2).replace(/\B(?=(\d{4})+(?!\d))/g, " "))
-        setOct(num.toString(8).replace(/\B(?=(\d{2})+(?!\d))/g, " "))
+        setBin(num.toString(2).replace(/\d{4}(?=.)/g, '$& '))
+        setOct(num.toString(8))
         setHex(num.toString(16))
 
 
