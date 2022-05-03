@@ -1,4 +1,4 @@
-import {Smile, PlusSquare, Binary, Hash} from "lucide-react"
+import {Smile, PlusSquare, Binary, Hash, Globe} from "lucide-react"
 
 const tools = [
         {
@@ -35,6 +35,15 @@ const tools = [
             "category": "encodings",
             "hidden": false,
             "keywords": "binary, base, base6, base10, base2, binary, hex, hexadecimal, oct, bin, dec, encodings, encoding, decoding"
+        },
+        {
+            "name": "tools.encodings.urlencode.title",
+            "external": false,
+            "urlname": "urlencode",
+            "icon": Globe,
+            "category": "encodings",
+            "hidden": false,
+            "keywords": "URL, urlencode, urldecode, URI, uriencode, uridecode, encoding, decoding, encoder, decoder, tool"
         }
     ]
 

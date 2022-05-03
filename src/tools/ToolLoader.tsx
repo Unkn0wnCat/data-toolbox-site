@@ -14,6 +14,7 @@ const HomePage = prerenderedLoadable(() => import('../pages/Home'));
 const RotTool = prerenderedLoadable(() => import('./cyphers_and_cryptography/rot/RotTool'));
 const Base64Tool = prerenderedLoadable(() => import('./encodings/base64/Base64Tool'));
 const NumberBaseTool = prerenderedLoadable(() => import('./encodings/numberbase/NumberBaseTool'));
+const URLEncodeTool = prerenderedLoadable(() => import('./encodings/urlencode/URLEncodeTool'));
 
 type ErrorBoundaryProps = {
     resetFunction: () => void
@@ -71,6 +72,9 @@ const ToolLoader = () => {
 
         case "numberbase":
             return <ToolErrorBoundary resetFunction={forceReset} key={key}><NumberBaseTool/></ToolErrorBoundary>;
+
+        case "urlencode":
+            return <ToolErrorBoundary resetFunction={forceReset} key={key}><URLEncodeTool/></ToolErrorBoundary>;
 
         default:
             return <NotFoundPage/>;

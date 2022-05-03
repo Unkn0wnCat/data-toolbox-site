@@ -49,6 +49,10 @@
             "octal": "Oktal",
             "hexadecimal": "Hexadezimal",
             "nanWarning": "Die Eingabe ist keine gültige Zahl!"
+        },
+        "urlencode": {
+          "title": "URL-Kodierung",
+          "description": "Kodiere und dekodiere <wikipedia>URL-kodierte (or Prozent-kodierte)</wikipedia> Zeichenfolgen."
         }
     }
   },

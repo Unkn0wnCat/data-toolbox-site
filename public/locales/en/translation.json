@@ -49,6 +49,10 @@
             "octal": "Octal",
             "hexadecimal": "Hexadecimal",
             "nanWarning": "The input is not a valid number!"
+        },
+        "urlencode": {
+          "title": "URL-Encoding",
+          "description": "Encode and decode strings to and from <wikipedia>URL-encoding (or Percent-encoding)</wikipedia>."
         }
     }
   },
