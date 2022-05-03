@@ -10,12 +10,10 @@
 
 import { clientsClaim } from 'workbox-core';
 import { ExpirationPlugin } from 'workbox-expiration';
-import {CacheableResponsePlugin} from 'workbox-cacheable-response';
 import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate, CacheFirst } from 'workbox-strategies';
+import { StaleWhileRevalidate } from 'workbox-strategies';
 import {setCacheNameDetails} from 'workbox-core';
-import {BackgroundSyncPlugin} from 'workbox-background-sync';
 
 declare const self: ServiceWorkerGlobalScope;
 

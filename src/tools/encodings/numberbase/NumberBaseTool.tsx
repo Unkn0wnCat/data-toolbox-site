@@ -26,7 +26,7 @@ const NumberBaseTool = () => {
                 num = parseInt(input.replaceAll(" ", ""), 10)
                 break
             case "hex":
-                num = parseInt(input.replaceAll(" ", ""), 16)
+                num = parseInt(input.replaceAll(" ", "").replace(/^(0x)/,''), 16)
                 break
             case "oct":
                 num = parseInt(input.replaceAll(" ", ""), 8)
