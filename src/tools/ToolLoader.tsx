@@ -15,6 +15,7 @@ const RotTool = prerenderedLoadable(() => import('./cyphers_and_cryptography/rot
 const Base64Tool = prerenderedLoadable(() => import('./encodings/base64/Base64Tool'));
 const NumberBaseTool = prerenderedLoadable(() => import('./encodings/numberbase/NumberBaseTool'));
 const URLEncodeTool = prerenderedLoadable(() => import('./encodings/urlencode/URLEncodeTool'));
+const IPv4SubnettingTool = prerenderedLoadable(() => import('./networking/ipv4subnetting/IPv4SubnettingTool'));
 
 type ErrorBoundaryProps = {
     resetFunction: () => void
@@ -75,6 +76,9 @@ const ToolLoader = () => {
 
         case "urlencode":
             return <ToolErrorBoundary resetFunction={forceReset} key={key}><URLEncodeTool/></ToolErrorBoundary>;
+
+        case "ipv4subnetting":
+            return <ToolErrorBoundary resetFunction={forceReset} key={key}><IPv4SubnettingTool/></ToolErrorBoundary>;
 
         default:
             return <NotFoundPage/>;

@@ -1,4 +1,4 @@
-import {Smile, PlusSquare, Binary, Hash, Globe} from "lucide-react"
+import {Smile, PlusSquare, Binary, Hash, Globe, Network} from "lucide-react"
 
 const tools = [
         {
@@ -44,6 +44,15 @@ const tools = [
             "category": "encodings",
             "hidden": false,
             "keywords": "URL, urlencode, urldecode, URI, uriencode, uridecode, encoding, decoding, encoder, decoder, tool"
+        },
+        {
+            "name": "tools.networking.ipv4subnetting.title",
+            "external": false,
+            "urlname": "ipv4subnetting",
+            "icon": Network,
+            "category": "networking",
+            "hidden": false,
+            "keywords": "subnetting, networking, ipv4, ip4, ip, internet protocol, subnet, subnetter, netmask, tool"
         }
     ]
 

@@ -18,7 +18,8 @@
     "categories": {
       "everything": "Alles",
       "cryptography": "Kryptografie",
-      "encodings": "Kodierungen"
+      "encodings": "Kodierungen",
+      "networking": "Netzwerke"
     },
     "cryptography": {
       "common": {
@@ -33,27 +34,40 @@
       }
     },
     "encodings": {
-        "common": {
-            "encoded": "Kodiert",
-            "decoded": "Dekodiert"
-        },
-        "base64": {
-            "title": "Base64",
-            "description": "<wikipedia>Base64-Codierung</wikipedia> wird oft genutzt um beliebige Binärdaten in pure Zeichenfolgen zu schreiben, indem die Daten auf 64 ASCII-Zeichen projeziert werden."
-        },
-        "numberbase": {
-            "title": "Basis-Konverter",
-            "description": "Basis-Konverter konvertiert Zahlen in eine andere Basis (z.B. Binär, Hexadezimal, etc.)",
-            "decimal": "Dezimal",
-            "binary": "Binär",
-            "octal": "Oktal",
-            "hexadecimal": "Hexadezimal",
-            "nanWarning": "Die Eingabe ist keine gültige Zahl!"
-        },
-        "urlencode": {
-          "title": "URL-Kodierung",
-          "description": "Kodiere und dekodiere <wikipedia>URL-kodierte (or Prozent-kodierte)</wikipedia> Zeichenfolgen."
-        }
+      "common": {
+        "encoded": "Kodiert",
+        "decoded": "Dekodiert"
+      },
+      "base64": {
+        "title": "Base64",
+        "description": "<wikipedia>Base64-Codierung</wikipedia> wird oft genutzt um beliebige Binärdaten in pure Zeichenfolgen zu schreiben, indem die Daten auf 64 ASCII-Zeichen projeziert werden."
+      },
+      "numberbase": {
+        "title": "Basis-Konverter",
+        "description": "Basis-Konverter konvertiert Zahlen in eine andere Basis (z.B. Binär, Hexadezimal, etc.)",
+        "decimal": "Dezimal",
+        "binary": "Binär",
+        "octal": "Oktal",
+        "hexadecimal": "Hexadezimal",
+        "nanWarning": "Die Eingabe ist keine gültige Zahl!"
+      },
+      "urlencode": {
+        "title": "URL-Kodierung",
+        "description": "Kodiere und dekodiere <wikipedia>URL-kodierte (or Prozent-kodierte)</wikipedia> Zeichenfolgen."
+      }
+    },
+    "networking": {
+      "ipv4subnetting": {
+        "title": "IPv4-Subnetzrechner",
+        "description": "Der IPv4-Subnetzrechner visualisiert IPv4-Subnetze und berechnet die erste und letzte Adresse aus einem Subnetz nach CIDR-Notation."
+      },
+      "common": {
+        "ipv4addr": "IPv4-Adresse",
+        "firstAddr": "Erste Adresse",
+        "lastAddr": "Letzte Adresse",
+        "subnetMask": "Subnetzmaske",
+        "binary": "Binär"
+      }
     }
   },
   "about": {

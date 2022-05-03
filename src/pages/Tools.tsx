@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import {Lock, Binary, List} from 'lucide-react';
+import {Lock, Binary, List, Network} from 'lucide-react';
 
 import { useTranslation } from 'react-i18next';
 
@@ -31,6 +31,7 @@ const ToolsPage = () => {
                     <LinkBox to={"/tools"} text={t("tools.categories.everything")} icon={<List/>} small={true} highlight={category == null} />
                     <LinkBox to={"/tools/cryptography"} text={t("tools.categories.cryptography")} icon={<Lock/>} small={true} highlight={category === "cryptography"} />
                     <LinkBox to={"/tools/encodings"} text={t("tools.categories.encodings")} icon={<Binary/>} small={true} highlight={category === "encodings"} />
+                    <LinkBox to={"/tools/networking"} text={t("tools.categories.networking")} icon={<Network/>} small={true} highlight={category === "networking"} />
                     {/*<LinkBox to={"/tools/osm"} text={"OSM"} icon={icons["Map"]} small={true} highlight={category === "osm"} />*/}
                 </div>
 

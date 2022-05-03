@@ -18,7 +18,8 @@
     "categories": {
       "everything": "Everything",
       "cryptography": "Cryptography",
-      "encodings": "Encodings"
+      "encodings": "Encodings",
+      "networking": "Networking"
     },
     "cryptography": {
       "common": {
@@ -33,27 +34,40 @@
       }
     },
     "encodings": {
-        "common": {
-            "encoded": "Encoded",
-            "decoded": "Decoded"
-        },
-        "base64": {
-          "title": "Base64",
-          "description": "<wikipedia>Base64-encoding</wikipedia> is commonly used for storing arbitrary binary data in pure strings, by mapping it to 64 ASCII characters."
-        },
-        "numberbase": {
-            "title": "Base Converter",
-            "description": "Convert between decimal, binary, octal and hexadecimal numbers.",
-            "decimal": "Decimal",
-            "binary": "Binary",
-            "octal": "Octal",
-            "hexadecimal": "Hexadecimal",
-            "nanWarning": "The input is not a valid number!"
-        },
-        "urlencode": {
-          "title": "URL-Encoding",
-          "description": "Encode and decode strings to and from <wikipedia>URL-encoding (or Percent-encoding)</wikipedia>."
-        }
+      "common": {
+        "encoded": "Encoded",
+        "decoded": "Decoded"
+      },
+      "base64": {
+        "title": "Base64",
+        "description": "<wikipedia>Base64-encoding</wikipedia> is commonly used for storing arbitrary binary data in pure strings, by mapping it to 64 ASCII characters."
+      },
+      "numberbase": {
+        "title": "Base Converter",
+        "description": "Convert between decimal, binary, octal and hexadecimal numbers.",
+        "decimal": "Decimal",
+        "binary": "Binary",
+        "octal": "Octal",
+        "hexadecimal": "Hexadecimal",
+        "nanWarning": "The input is not a valid number!"
+      },
+      "urlencode": {
+        "title": "URL-Encoding",
+        "description": "Encode and decode strings to and from <wikipedia>URL-encoding (or Percent-encoding)</wikipedia>."
+      }
+    },
+    "networking": {
+      "ipv4subnetting": {
+        "title": "IPv4 Subnetter",
+        "description": "The IPv4 subnetter visualizes IPv4 subnets and calculates the first and last address from a CIDR-notated subnet."
+      },
+      "common": {
+        "ipv4addr": "IPv4 address",
+        "firstAddr": "First address",
+        "lastAddr": "Last address",
+        "subnetMask": "Subnet mask",
+        "binary": "Binary"
+      }
     }
   },
   "about": {

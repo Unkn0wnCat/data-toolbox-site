@@ -1,0 +1,44 @@
+@import "../../../common";
+
+.fakeLabel {
+    display: block;
+        
+    margin-top: $layoutPadding;
+    margin-bottom: (-$layoutPadding + 5px);
+}
+
+.fakeField {
+    @include boxStyle;
+            
+    display: block;
+
+    width: 368px;
+    opacity: .75;
+    background: rgba(0, 0, 0, .25);
+
+    @media(prefers-color-scheme: dark) {
+        background: rgba(255, 255, 255, .025);
+    }
+}
+
+.combiInput {
+    @include boxStyle;
+
+    display: flex;
+    align-items: baseline;
+    padding: 0;
+    width: fit-content;
+    overflow: hidden;
+    
+    
+    input {
+        @include boxStyle;
+        margin: 0;
+        width: 70px;
+        border-radius: 0;
+        border: none;
+        background: transparent !important;
+        box-shadow: none;
+        text-align: center;
+    }
+}
