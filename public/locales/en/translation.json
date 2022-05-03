@@ -1,13 +1,13 @@
 {
   "site": {
-    "title": "Kevin's Data-Toolbox",
+    "title": "Kevins Data-Toolbox",
     "navigation": {
       "tools": "Tools",
       "about": "About"
     }
   },
   "home": {
-    "heroPretitle": "Kevin's",
+    "heroPretitle": "Kevins",
     "heroTitle": "Data Toolbox",
     "heroSubtitle": "Your One-Stop-Data-Shop!"
   },
@@ -53,8 +53,8 @@
     }
   },
   "about": {
-    "title": "About Kevin's Data-Toolbox",
-    "p1": "Kevin's Data-Toolbox is my collection of useful small tools. Feel free to look through them to see if there anything is of use to you!",
+    "title": "About Kevins Data-Toolbox",
+    "p1": "Kevins Data-Toolbox is my collection of useful small tools. Feel free to look through them to see if there anything is of use to you!",
     "p2": "There will be more tools added over time as I create them, so check back regularly to learn about new tools!",
     "morebyme": "More By Me",
     "visitKevinKdev": "Check out my website <1>KevinK.dev</1>!"
