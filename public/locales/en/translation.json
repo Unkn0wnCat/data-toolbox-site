@@ -47,6 +47,12 @@
     "system": {
         "notfound": "Page Not Found",
         "language": "Language",
-        "imprint": "Imprint"
+        "imprint": "Imprint",
+        "errors": {
+            "toolException": {
+                "title": "The tool encountered a fatal error.",
+                "description": "The tool encountered a fatal error and was unable to complete its task. Please retry."
+            }
+        }
     }
 }

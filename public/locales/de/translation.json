@@ -47,6 +47,12 @@
     "system": {
         "notfound": "Seite nicht gefunden",
         "language": "Sprache",
-        "imprint": "Impressum"
+        "imprint": "Impressum",
+        "errors": {
+            "toolException": {
+                "title": "Ein fatales Problem ist aufgetreten.",
+                "description": "Im Werkzeug ist ein fatales Problem aufgetreten und die Aufgabe konnte nicht abgeschlossen werden. Bitte erneut versuchen."
+            }
+        }
     }
 }
