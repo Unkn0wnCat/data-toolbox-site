@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 
 import * as styles from "./Navigation.module.scss";
-import { Globe, Info, List, PenTool, RefreshCw, Wrench } from "lucide-react";
+import { Globe, Info, List, RefreshCw } from "lucide-react";
 import LanguageChooser from "./LanguageChooser";
 import ServiceWorkerAPI from "../services/serviceWorkers"
 
