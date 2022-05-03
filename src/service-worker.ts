@@ -14,12 +14,13 @@ import { precacheAndRoute, createHandlerBoundToURL } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
 import { StaleWhileRevalidate } from 'workbox-strategies';
 import {setCacheNameDetails} from 'workbox-core';
+import {version} from '../package.json';
 
 declare const self: ServiceWorkerGlobalScope;
 
 setCacheNameDetails({
   prefix: 'kevins-toolbox',
-  suffix: 'v1',
+  suffix: 'v'+version,
   precache: 'precache',
   runtime: 'runtime'
 });
@@ -96,3 +97,20 @@ registerRoute(
     plugins: []
   })
 )
+
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          if (cacheName.startsWith('kevins-toolbox') && cacheName !== 'kevins-toolbox-precache-v'+version) {
+            return true;
+          }
+          return false;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
