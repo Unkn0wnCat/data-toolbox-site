@@ -92,16 +92,16 @@ const NumberBaseTool = () => {
                 <BoxMessage icon={<AlertOctagon/>} color="red" hideInPlace={!nanState}>{t("tools.encodings.numberbase.nanWarning")}</BoxMessage>
 
                 <label htmlFor="base10-input">{t("tools.encodings.numberbase.decimal")}</label>
-                <textarea id="base10-input" placeholder={t("tools.encodings.numberbase.decimal")} onChange={(e) => {setInputType("dec"); setInput(e.currentTarget.value);}} value={dec}></textarea>
+                <textarea id="base10-input" inputMode={"numeric"} placeholder={t("tools.encodings.numberbase.decimal")} onChange={(e) => {setInputType("dec"); setInput(e.currentTarget.value);}} value={dec}></textarea>
 
                 <label htmlFor="base16-input">{t("tools.encodings.numberbase.hexadecimal")}</label>
                 <textarea id="base16-input" placeholder={t("tools.encodings.numberbase.hexadecimal")} onChange={(e) => {setInputType("hex"); setInput(e.currentTarget.value);}} value={hex}></textarea>
 
                 <label htmlFor="base8-input">{t("tools.encodings.numberbase.octal")}</label>
-                <textarea id="base8-input" placeholder={t("tools.encodings.numberbase.octal")} onChange={(e) => {setInputType("oct"); setInput(e.currentTarget.value);}} value={oct}></textarea>
+                <textarea id="base8-input" inputMode={"numeric"} placeholder={t("tools.encodings.numberbase.octal")} onChange={(e) => {setInputType("oct"); setInput(e.currentTarget.value);}} value={oct}></textarea>
 
                 <label htmlFor="base2-input">{t("tools.encodings.numberbase.binary")}</label>
-                <textarea id="base2-input" placeholder={t("tools.encodings.numberbase.binary")} onChange={(e) => {setInputType("bin"); setInput(e.currentTarget.value);}} value={bin}></textarea>
+                <textarea id="base2-input" inputMode={"numeric"} placeholder={t("tools.encodings.numberbase.binary")} onChange={(e) => {setInputType("bin"); setInput(e.currentTarget.value);}} value={bin}></textarea>
 
                 
             </div>

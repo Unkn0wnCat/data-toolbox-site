@@ -232,15 +232,15 @@ const IPv4SubnettingTool = () => {
                     <div>
                         <label htmlFor="ipv4-input">{t("tools.networking.common.ipv4addr")}</label>
                         <div className={styles.combiInput}>
-                            <input ref={ipInput1} id="ipv4-input" placeholder={"192"} onChange={(e) => {setIPPart1(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart1.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput2.current?.focus()}} value={ipPart1} />
+                            <input ref={ipInput1} id="ipv4-input" placeholder={"192"} inputMode={"numeric"} onChange={(e) => {setIPPart1(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart1.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput2.current?.focus()}} value={ipPart1} />
                             <span>.</span>
-                            <input ref={ipInput2} id="ipv4-input2" placeholder={"168"} onChange={(e) => {setIPPart2(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart2.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput3.current?.focus()}} value={ipPart2} />
+                            <input ref={ipInput2} id="ipv4-input2" placeholder={"168"} inputMode={"numeric"} onChange={(e) => {setIPPart2(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart2.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput3.current?.focus()}} value={ipPart2} />
                             <span>.</span>
-                            <input ref={ipInput3} id="ipv4-input3" placeholder={"178"} onChange={(e) => {setIPPart3(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart3.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput4.current?.focus()}} value={ipPart3} />
+                            <input ref={ipInput3} id="ipv4-input3" placeholder={"178"} inputMode={"numeric"} onChange={(e) => {setIPPart3(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart3.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput4.current?.focus()}} value={ipPart3} />
                             <span>.</span>
-                            <input ref={ipInput4} id="ipv4-input4" placeholder={"1"} onChange={(e) => {setIPPart4(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart4.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === "/" || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") subnetInput.current?.focus()}} value={ipPart4} />
+                            <input ref={ipInput4} id="ipv4-input4" placeholder={"1"} inputMode={"numeric"} onChange={(e) => {setIPPart4(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart4.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === "/" || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") subnetInput.current?.focus()}} value={ipPart4} />
                             <span>/</span>
-                            <input ref={subnetInput} id="subnet-input" placeholder={"24"} onChange={(e) => {setSubnet(e.currentTarget.value);}} value={subnet} />
+                            <input ref={subnetInput} id="subnet-input" placeholder={"24"} inputMode={"numeric"} onChange={(e) => {setSubnet(e.currentTarget.value);}} value={subnet} />
                         </div>
                     </div>
 
