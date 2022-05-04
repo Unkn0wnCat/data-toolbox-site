@@ -13,18 +13,20 @@ let eventListeners: Map<events, ((ev: Event) => void)[]> = new Map<events, ((ev:
 
 let pendingUpdate = false;
 
-navigator.serviceWorker.getRegistration().then((reg) => {
-  if(reg && reg.waiting) {
-    pendingUpdate = true;
-    let handlers = eventListeners.get(events.updateAvailable) || [];
-
-    handlers.forEach((func) => {
-      func({
-        type: events.updateAvailable
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistration().then((reg) => {
+    if(reg && reg.waiting) {
+      pendingUpdate = true;
+      let handlers = eventListeners.get(events.updateAvailable) || [];
+  
+      handlers.forEach((func) => {
+        func({
+          type: events.updateAvailable
+        });
       });
-    });
-  }
-})
+    }
+  })
+}
 
 const broadcast = new BroadcastChannel('sw-updates');
 
