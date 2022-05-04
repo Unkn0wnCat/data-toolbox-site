@@ -2,14 +2,11 @@
 
 .heroBox {
     margin-top: -$layoutNavigationHeight;
-
-    background-color: #1c1c1c;
-    background-image: url(https://source.unsplash.com/uq5RMAZdZG4/1920x1080);
     
     > div {
         padding-top: 100px;
         padding-bottom: 100px;
-        min-height: 600px;
+        min-height: 300px;
 
         display: flex;
         flex-direction: column;

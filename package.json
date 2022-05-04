@@ -1,6 +1,6 @@
 {
   "name": "kevins-data-toolbox",
-  "version": "2.4.6",
+  "version": "2.4.7",
   "private": true,
   "dependencies": {
     "@loadable/component": "^5.15.0",
