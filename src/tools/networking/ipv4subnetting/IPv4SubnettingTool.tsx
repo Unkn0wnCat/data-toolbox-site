@@ -228,50 +228,59 @@ const IPv4SubnettingTool = () => {
 
                 <p><Trans i18nKey={"tools.networking.ipv4subnetting.description"} components={{}} /></p>
 
-                <label htmlFor="ipv4-input">{t("tools.networking.common.ipv4addr")}</label>
-                <div className={styles.combiInput}>
-                    <input ref={ipInput1} id="ipv4-input" placeholder={"192"} onChange={(e) => {setIPPart1(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart1.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput2.current?.focus()}} value={ipPart1} />
-                    <span>.</span>
-                    <input ref={ipInput2} id="ipv4-input2" placeholder={"168"} onChange={(e) => {setIPPart2(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart2.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput3.current?.focus()}} value={ipPart2} />
-                    <span>.</span>
-                    <input ref={ipInput3} id="ipv4-input3" placeholder={"178"} onChange={(e) => {setIPPart3(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart3.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput4.current?.focus()}} value={ipPart3} />
-                    <span>.</span>
-                    <input ref={ipInput4} id="ipv4-input4" placeholder={"1"} onChange={(e) => {setIPPart4(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart4.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === "/" || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") subnetInput.current?.focus()}} value={ipPart4} />
-                    <span>/</span>
-                    <input ref={subnetInput} id="subnet-input" placeholder={"24"} onChange={(e) => {setSubnet(e.currentTarget.value);}} value={subnet} />
+                <div className={styles.inputGrid}>
+                    <div>
+                        <label htmlFor="ipv4-input">{t("tools.networking.common.ipv4addr")}</label>
+                        <div className={styles.combiInput}>
+                            <input ref={ipInput1} id="ipv4-input" placeholder={"192"} onChange={(e) => {setIPPart1(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart1.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput2.current?.focus()}} value={ipPart1} />
+                            <span>.</span>
+                            <input ref={ipInput2} id="ipv4-input2" placeholder={"168"} onChange={(e) => {setIPPart2(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart2.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput3.current?.focus()}} value={ipPart2} />
+                            <span>.</span>
+                            <input ref={ipInput3} id="ipv4-input3" placeholder={"178"} onChange={(e) => {setIPPart3(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart3.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") ipInput4.current?.focus()}} value={ipPart3} />
+                            <span>.</span>
+                            <input ref={ipInput4} id="ipv4-input4" placeholder={"1"} onChange={(e) => {setIPPart4(e.currentTarget.value); if((e.currentTarget.value.length >= 3 && e.currentTarget.value.length > ipPart4.length) || e.currentTarget.value[e.currentTarget.value.length - 1] === "/" || e.currentTarget.value[e.currentTarget.value.length - 1] === ".") subnetInput.current?.focus()}} value={ipPart4} />
+                            <span>/</span>
+                            <input ref={subnetInput} id="subnet-input" placeholder={"24"} onChange={(e) => {setSubnet(e.currentTarget.value);}} value={subnet} />
+                        </div>
+                    </div>
+
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")}</span>
+                        <span className={styles.fakeField}>{subnetMask || subnetMask === 0 ? intToIPv4String(subnetMask) : "???"}</span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.firstAddr")}</span>
+                        <span className={styles.fakeField}>{firstAddr ? intToIPv4String(firstAddr) : "???"}</span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.lastAddr")}</span>
+                        <span className={styles.fakeField}>{lastAddr ? intToIPv4String(lastAddr) : "???"}</span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.netAddr")}</span>
+                        <span className={styles.fakeField}>{isPeerNet ? "n/a" : (firstAddr ? intToIPv4String(firstAddr - 1) : "???")}</span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.broadcastAddr")}</span>
+                        <span className={styles.fakeField}>{isPeerNet ? "n/a" : (lastAddr ? intToIPv4String(lastAddr + 1) : "???")}</span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.ipv4addr")} ({t("tools.networking.common.binary")})</span>
+                        <span className={styles.fakeField}>
+                            {ipBinary || ipBinary === 0 ? ipBinary.toString(2).padStart(32, "0").split("").map((bit, index) => {
+                                return <span style={{color: (index) >= (subnetNumber||32) ? "red" : undefined}} key={"bit"+index}>{bit}</span>
+                            }) : "???"}
+                        </span>
+                    </div>
+                    <div>
+                        <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")} ({t("tools.networking.common.binary")})</span>
+                        <span className={styles.fakeField}>
+                            {subnetMask || subnetMask === 0 ? subnetMask.toString(2).padStart(32, "0").split("").map((bit, index) => {
+                                return <span key={"maskbit"+index}>{bit}</span>
+                            }) : "???"}
+                        </span>
+                    </div>
                 </div>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")}</span>
-                <span className={styles.fakeField}>{subnetMask || subnetMask === 0 ? intToIPv4String(subnetMask) : "???"}</span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.firstAddr")}</span>
-                <span className={styles.fakeField}>{firstAddr ? intToIPv4String(firstAddr) : "???"}</span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.lastAddr")}</span>
-                <span className={styles.fakeField}>{lastAddr ? intToIPv4String(lastAddr) : "???"}</span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.netAddr")}</span>
-                <span className={styles.fakeField}>{isPeerNet ? "n/a" : (firstAddr ? intToIPv4String(firstAddr - 1) : "???")}</span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.broadcastAddr")}</span>
-                <span className={styles.fakeField}>{isPeerNet ? "n/a" : (lastAddr ? intToIPv4String(lastAddr + 1) : "???")}</span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.ipv4addr")} ({t("tools.networking.common.binary")})</span>
-                <span className={styles.fakeField}>
-                    {ipBinary || ipBinary === 0 ? ipBinary.toString(2).padStart(32, "0").split("").map((bit, index) => {
-                        return <span style={{color: (index) >= (subnetNumber||32) ? "red" : undefined}} key={"bit"+index}>{bit}</span>
-                    }) : "???"}
-                </span>
-
-                <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")} ({t("tools.networking.common.binary")})</span>
-                <span className={styles.fakeField}>
-                    {subnetMask || subnetMask === 0 ? subnetMask.toString(2).padStart(32, "0").split("").map((bit, index) => {
-                        return <span key={"maskbit"+index}>{bit}</span>
-                    }) : "???"}
-                </span>
-                
-
-                
             </div>
         </main>
     )
