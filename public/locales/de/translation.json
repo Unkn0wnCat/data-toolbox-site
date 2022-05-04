@@ -59,14 +59,22 @@
     "networking": {
       "ipv4subnetting": {
         "title": "IPv4-Subnetzrechner",
-        "description": "Der IPv4-Subnetzrechner visualisiert IPv4-Subnetze und berechnet die erste und letzte Adresse aus einem Subnetz nach CIDR-Notation."
+        "description": "Der IPv4-Subnetzrechner visualisiert IPv4-Subnetze und berechnet die erste und letzte Adresse aus einem Subnetz nach CIDR-Notation.",
+        "error": {
+          "isNaN": "Dies muss eine Zahl sein!",
+          "tooSmall": "Dies muss eine positive Zahl sein!",
+          "tooBig": "Diese Zahl darf nicht größer als 255 sein!",
+          "tooBigSubnet": "Diese Zahl darf nicht größer als 32 sein!"
+        }
       },
       "common": {
         "ipv4addr": "IPv4-Adresse",
         "firstAddr": "Erste Adresse",
         "lastAddr": "Letzte Adresse",
         "subnetMask": "Subnetzmaske",
-        "binary": "Binär"
+        "binary": "Binär",
+        "netAddr": "Netzwerkadresse",
+        "broadcastAddr": "Broadcast-Adresse"
       }
     }
   },

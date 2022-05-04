@@ -59,14 +59,22 @@
     "networking": {
       "ipv4subnetting": {
         "title": "IPv4 Subnetter",
-        "description": "The IPv4 subnetter visualizes IPv4 subnets and calculates the first and last address from a CIDR-notated subnet."
+        "description": "The IPv4 subnetter visualizes IPv4 subnets and calculates the first and last address from a CIDR-notated subnet.",
+        "error": {
+          "isNaN": "This needs to be a valid number!",
+          "tooSmall": "This needs to be a positive number!",
+          "tooBig": "This may not be bigger than 255!",
+          "tooBigSubnet": "This may not be bigger than 32!"
+        }
       },
       "common": {
         "ipv4addr": "IPv4 address",
         "firstAddr": "First address",
         "lastAddr": "Last address",
         "subnetMask": "Subnet mask",
-        "binary": "Binary"
+        "binary": "Binary",
+        "netAddr": "Network address",
+        "broadcastAddr": "Broadcast address"
       }
     }
   },

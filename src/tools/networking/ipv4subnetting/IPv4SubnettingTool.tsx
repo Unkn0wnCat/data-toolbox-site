@@ -34,10 +34,10 @@ const IPv4SubnettingTool = () => {
 
     let [ipBinary, setIpBinary] = useState<number|undefined>(undefined);
     let [subnetNumber, setSubnetMaskNumber] = useState<number|undefined>(undefined);
-    let [subnetBinary, setSubnetMaskBinaryString] = useState<string|undefined>(undefined);
     let [subnetMask, setSubnetMask] = useState<number|undefined>(undefined);
     let [firstAddr, setFirstAddr] = useState<number|undefined>(undefined);
     let [lastAddr, setLastAddr] = useState<number|undefined>(undefined);
+    let [isPeerNet, setIsPeerNet] = useState<boolean>(false);
 
     useEffect(() => {
         let myIpPart1 = ipPart1;
@@ -92,19 +92,105 @@ const IPv4SubnettingTool = () => {
         if(!isNaN(ipPart4Num)) setIPPart4(ipPart4Num.toString());
         if(!isNaN(subnetNum))  setSubnet(subnetNum.toString());
 
+        let invalid = false;
+
+        [ipInput1, ipInput2, ipInput3, ipInput4].forEach((field) => {
+            if(!field.current) return
+
+            const val = field.current.value;
+
+            if (val === "") {
+                field.current.setCustomValidity("");
+                return
+            }
+
+            const valInt = parseInt(val);
+
+            if(isNaN(valInt)) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.isNaN"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            if(valInt < 0) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.tooSmall"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            if(valInt > 255) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.tooBig"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            field.current.setCustomValidity("");
+        });
+
+
+
+        ((field: React.RefObject<HTMLInputElement>) => {
+            if(!field.current) return
+
+            const val = field.current.value;
+
+            if (val === "") {
+                field.current.setCustomValidity("");
+                return
+            }
+
+            const valInt = parseInt(val);
+
+            if(isNaN(valInt)) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.isNaN"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            if(valInt < 0) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.tooSmall"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            if(valInt > 32) {
+                field.current.setCustomValidity(t("tools.networking.ipv4subnetting.error.tooBigSubnet"));
+                field.current.reportValidity();
+                invalid = true;
+                return
+            }
+
+            field.current.setCustomValidity("");
+        })(subnetInput)
+
         setIpBinary(undefined);
         setFirstAddr(undefined);
         setLastAddr(undefined);
-        setSubnetMaskBinaryString(undefined);
         setSubnetMaskNumber(undefined);
         setSubnetMask(undefined);
+        setIsPeerNet(false);
+
+        if(invalid) return;
 
         if(!isNaN(ipPart1Num) && !isNaN(ipPart2Num) && !isNaN(ipPart3Num) && !isNaN(ipPart4Num)) {
             let ipBinary = ipPart1Num * Math.pow(2, 24) + ipPart2Num * Math.pow(2, 16) + ipPart3Num * Math.pow(2, 8) + ipPart4Num;
             setIpBinary(ipBinary);
+
             
             if (!isNaN(subnetNum)) {
                 setSubnetMaskNumber(subnetNum);
+
+                let peerNet = false;
+
+                if (subnetNum > 30) {
+                    setIsPeerNet(true);
+                    peerNet = true;
+                }
     
             
                 let subnetMaskBinary = new Uint32Array(1);
@@ -115,14 +201,21 @@ const IPv4SubnettingTool = () => {
     
                 subnetMaskBinary[0] ^= 0xffffffff
     
-                setSubnetMaskBinaryString(subnetMaskBinary[0].toString(2))
+                //setSubnetMaskBinaryString(subnetMaskBinary[0].toString(2))
                 setSubnetMask(subnetMaskBinary[0])
     
-                setFirstAddr((ipBinary & subnetMaskBinary[0])+1)
-                setLastAddr((ipBinary | (subnetMaskBinary[0] ^ 0xffffffff)) - 1)
+                if(!peerNet) {
+                    setFirstAddr((ipBinary & subnetMaskBinary[0])+1)
+                    setLastAddr((ipBinary | (subnetMaskBinary[0] ^ 0xffffffff)) - 1)
+                }
+
+                if(peerNet) {
+                    setFirstAddr((ipBinary & subnetMaskBinary[0]))
+                    setLastAddr((ipBinary | (subnetMaskBinary[0] ^ 0xffffffff)))
+                }
             }
         }
-    }, [ipPart1, ipPart2, ipPart3, ipPart4, subnet])
+    }, [ipPart1, ipPart2, ipPart3, ipPart4, subnet, t])
     
     return (
         <main>
@@ -149,7 +242,7 @@ const IPv4SubnettingTool = () => {
                 </div>
 
                 <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")}</span>
-                <span className={styles.fakeField}>{subnetMask ? intToIPv4String(subnetMask) : "???"}</span>
+                <span className={styles.fakeField}>{subnetMask || subnetMask === 0 ? intToIPv4String(subnetMask) : "???"}</span>
 
                 <span className={styles.fakeLabel}>{t("tools.networking.common.firstAddr")}</span>
                 <span className={styles.fakeField}>{firstAddr ? intToIPv4String(firstAddr) : "???"}</span>
@@ -157,16 +250,22 @@ const IPv4SubnettingTool = () => {
                 <span className={styles.fakeLabel}>{t("tools.networking.common.lastAddr")}</span>
                 <span className={styles.fakeField}>{lastAddr ? intToIPv4String(lastAddr) : "???"}</span>
 
+                <span className={styles.fakeLabel}>{t("tools.networking.common.netAddr")}</span>
+                <span className={styles.fakeField}>{isPeerNet ? "n/a" : (firstAddr ? intToIPv4String(firstAddr - 1) : "???")}</span>
+
+                <span className={styles.fakeLabel}>{t("tools.networking.common.broadcastAddr")}</span>
+                <span className={styles.fakeField}>{isPeerNet ? "n/a" : (lastAddr ? intToIPv4String(lastAddr + 1) : "???")}</span>
+
                 <span className={styles.fakeLabel}>{t("tools.networking.common.ipv4addr")} ({t("tools.networking.common.binary")})</span>
                 <span className={styles.fakeField}>
-                    {ipBinary ? ipBinary.toString(2).padStart(32, "0").split("").map((bit, index) => {
+                    {ipBinary || ipBinary === 0 ? ipBinary.toString(2).padStart(32, "0").split("").map((bit, index) => {
                         return <span style={{color: (index) >= (subnetNumber||32) ? "red" : undefined}} key={"bit"+index}>{bit}</span>
                     }) : "???"}
                 </span>
 
                 <span className={styles.fakeLabel}>{t("tools.networking.common.subnetMask")} ({t("tools.networking.common.binary")})</span>
                 <span className={styles.fakeField}>
-                    {subnetBinary ? subnetBinary.padStart(32, "0").split("").map((bit, index) => {
+                    {subnetMask || subnetMask === 0 ? subnetMask.toString(2).padStart(32, "0").split("").map((bit, index) => {
                         return <span key={"maskbit"+index}>{bit}</span>
                     }) : "???"}
                 </span>
