@@ -1,0 +1,42 @@
+@use "sass:math";
+@import "../common";
+
+.settingsSection {
+    display: flex;
+    flex-direction: column;
+    padding: $layoutPadding 0;
+    border-bottom: thin solid rgba(0, 0, 0, .1);
+
+    @media(prefers-color-scheme: dark) {    
+        border-bottom: thin solid rgba(255, 255, 255, .1);
+    }
+
+    > .sectionHeader {
+        font-weight: 700;
+        margin-bottom: $layoutPadding;
+    }
+
+    > a {
+        display: flex;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        border-top: thin solid rgba(0, 0, 0, .1);
+        border-bottom: thin solid rgba(0, 0, 0, .1);
+        padding: math.div($layoutPadding, 2);
+        margin: 0 math.div($layoutPadding, 2);
+    
+        @media(prefers-color-scheme: dark) {    
+            border-top: thin solid rgba(255, 255, 255, .1);
+            border-bottom: thin solid rgba(255, 255, 255, .1);
+        }
+
+        > span {
+            flex-grow: 1;
+        }
+    }
+
+    > a ~ a {
+        border-top: none;
+    }
+}

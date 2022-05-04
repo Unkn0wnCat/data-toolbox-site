@@ -98,13 +98,48 @@ const useUpdatePending = () => {
     return updatePending
 }
 
+const serviceWorkerAvailable = () => {
+  return 'serviceWorker' in navigator;
+}
+
+const checkUpdate = async (): Promise<boolean> => {
+  if('serviceWorker' in navigator) {
+    try {
+      const reg = await navigator.serviceWorker.getRegistration()
+  
+      if(!reg) return false;
+  
+      await reg.update();
+    } catch(e) {
+      return false;
+    }
+  }
+  return false;
+}
+
+const useCheckUpdate = () => {
+  const [checkingForUpdate, setChecking] = useState(false);
+
+  const checkForUpdate = async () => {
+    setChecking(true);
+
+    await checkUpdate();
+
+    setChecking(false);
+  }
+
+  return {checkingForUpdate, checkForUpdate};
+}
+
 const ServiceWorkerAPI = {
   on,
   off,
   forceUpdate,
   isUpdatePending,
   events,
-  useUpdatePending
+  useUpdatePending,
+  serviceWorkerAvailable,
+  useCheckUpdate
 }
 
 export default ServiceWorkerAPI

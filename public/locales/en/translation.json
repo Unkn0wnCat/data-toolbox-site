@@ -3,7 +3,8 @@
     "title": "Kevins Data-Toolbox",
     "navigation": {
       "tools": "Tools",
-      "about": "About"
+      "about": "About",
+      "settings": "Settings"
     }
   },
   "home": {
@@ -95,5 +96,18 @@
         "description": "The tool encountered a fatal error and was unable to complete its task. Please retry."
       }
     }
+  },
+  "licenses": {
+    "title": "Open-Source-Licenses"
+  },
+  "settings": {
+    "title": "Settings",
+    "currentVersion": "Current Version",
+    "offlineUnavailable": "Offline-installation not available on your browser.",
+    "checkingForUpdate": "Checking for updates...",
+    "checkForUpdate": "Check for Updates",
+    "version": "Version",
+    "about": "About",
+    "source": "Source Code"
   }
 }

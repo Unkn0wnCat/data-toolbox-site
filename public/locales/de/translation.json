@@ -3,7 +3,8 @@
     "title": "Kevins Datenkasten",
     "navigation": {
       "tools": "Werkzeuge",
-      "about": "Über"
+      "about": "Über",
+      "settings": "Einstellungen"
     }
   },
   "home": {
@@ -95,5 +96,18 @@
         "description": "Im Werkzeug ist ein fatales Problem aufgetreten und die Aufgabe konnte nicht abgeschlossen werden. Bitte erneut versuchen."
       }
     }
+  },
+  "licenses": {
+    "title": "Quellcode-Lizenzen"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "currentVersion": "Aktuelle Version",
+    "offlineUnavailable": "Offline-Installation in deinem Browser nicht verfügbar.",
+    "checkingForUpdate": "Prüfe auf Aktualisierungen...",
+    "checkForUpdate": "Prüfe auf Aktualisierungen",
+    "version": "Version",
+    "about": "Über",
+    "source": "Quellcode"
   }
 }
