@@ -1,4 +1,4 @@
-import {Smile, PlusSquare, Binary, Hash, Globe, Network} from "lucide-react"
+import {Smile, PlusSquare, Binary, Hash, Globe, Network, FileCog} from "lucide-react"
 
 const tools = [
         {
@@ -53,6 +53,15 @@ const tools = [
             "category": "networking",
             "hidden": false,
             "keywords": "subnetting, networking, ipv4, ip4, ip, internet protocol, subnet, subnetter, netmask, tool"
+        },
+        {
+            "name": "tools.encodings.linux_permissions.title",
+            "external": false,
+            "urlname": "linux_permissions",
+            "icon": FileCog,
+            "category": "encodings",
+            "hidden": false,
+            "keywords": "Linux, Permissions, octet, octets, rwx, encoding, decoding, encoder, decoder, base, 64, binary, tool"
         }
     ]
 

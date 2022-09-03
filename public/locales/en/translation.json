@@ -55,6 +55,13 @@
       "urlencode": {
         "title": "URL-Encoding",
         "description": "Encode and decode strings to and from <wikipedia>URL-encoding (or Percent-encoding)</wikipedia>."
+      },
+      "linux_permissions": {
+        "title": "Linux File-Permissions",
+        "description": "Linux (or other UNIX-ish systems) use 4 groups of 3 bits to represent basic file permissions. The first group sets the flags set UID, set GID, and sticky. The last three groups set the file-permissions for the owner user, the owner group, and everyone else in that order. Here the 3 bits stand for read, write, and execute. On directories execute stands for open / navigate into.",
+        "octal": "Octal Value",
+        "bits": "Permission-Bits",
+        "umask": "umask-Value"
       }
     },
     "networking": {

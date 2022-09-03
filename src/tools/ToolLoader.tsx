@@ -16,6 +16,7 @@ const Base64Tool = prerenderedLoadable(() => import('./encodings/base64/Base64To
 const NumberBaseTool = prerenderedLoadable(() => import('./encodings/numberbase/NumberBaseTool'));
 const URLEncodeTool = prerenderedLoadable(() => import('./encodings/urlencode/URLEncodeTool'));
 const IPv4SubnettingTool = prerenderedLoadable(() => import('./networking/ipv4subnetting/IPv4SubnettingTool'));
+const LinuxPermissionsTool = prerenderedLoadable(() => import('./encodings/linux_permissions/LinuxPermissionsTool'));
 
 type ErrorBoundaryProps = {
     resetFunction: () => void
@@ -79,6 +80,9 @@ const ToolLoader = () => {
 
         case "ipv4subnetting":
             return <ToolErrorBoundary resetFunction={forceReset} key={key}><IPv4SubnettingTool/></ToolErrorBoundary>;
+
+        case "linux_permissions":
+            return <ToolErrorBoundary resetFunction={forceReset} key={key}><LinuxPermissionsTool/></ToolErrorBoundary>;
 
         default:
             return <NotFoundPage/>;

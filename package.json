@@ -19,7 +19,7 @@
     "i18next-browser-languagedetector": "^6.1.0",
     "i18next-http-backend": "^1.2.1",
     "lodash": "^4.17.21",
-    "lucide-react": "^0.35.0",
+    "lucide-react": "^0.88.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-helmet": "^6.1.0",

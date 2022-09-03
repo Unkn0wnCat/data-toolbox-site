@@ -1,0 +1,10 @@
+@import "../../../common";
+
+.inputTable {
+    @include boxStyle;
+    border-collapse: separate;
+
+    .gap {
+        width: 20px;
+    }
+}

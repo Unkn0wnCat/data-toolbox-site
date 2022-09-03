@@ -55,6 +55,13 @@
       "urlencode": {
         "title": "URL-Kodierung",
         "description": "Kodiere und dekodiere <wikipedia>URL-kodierte (or Prozent-kodierte)</wikipedia> Zeichenfolgen."
+      },
+      "linux_permissions": {
+        "title": "Linux Berechtigungen",
+        "description": "Linux (und andere UNIX-artige Systeme) verwenden 4 Gruppen von je 3 Bits um grundlegende Dateiberechtigungen darzustellen. Die erste Gruppe setzt die Flags set UID, set GID, und sticky. Die letzten 3 Gruppen setzen die Dateiberechtigunen für den besitzenden Benutzer, die besitzende Gruppe, und jeden anderen in dieser Reihenfolge. Die 3 Bits stehen hierbei jeweils für Lesen, Schreiben, und Ausführen. Bei Ordnern steht Ausführen für Öffnen bzw. hinein Navigieren.",
+        "octal": "Oktal-Wert",
+        "bits": "Berechtigungsbits",
+        "umask": "umask-Wert"
       }
     },
     "networking": {
