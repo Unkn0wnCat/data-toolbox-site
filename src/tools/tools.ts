@@ -61,7 +61,7 @@ const tools = [
             "icon": FileCog,
             "category": "encodings",
             "hidden": false,
-            "keywords": "Linux, Permissions, octet, octets, rwx, encoding, decoding, encoder, decoder, base, 64, binary, tool"
+            "keywords": "Linux, Permissions, octet, octets, rwx, encoding, decoding, encoder, decoder, calculator, umask, binary, tool"
         }
     ]
 

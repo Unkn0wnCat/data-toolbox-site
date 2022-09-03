@@ -60,7 +60,7 @@ const LinuxPermissionsTool = () => {
         <main>
             <Helmet>
                 <title>{t("tools.encodings.linux_permissions.title")} | {t("site.title")}</title>
-                <meta name="keywords" content="Linux, Permissions, octet, octets, rwx, encoding, decoding, encoder, decoder, base, 64, binary, tool" />
+                <meta name="keywords" content="Linux, Permissions, octet, octets, rwx, encoding, decoding, encoder, decoder, calculator, umask, binary, tool" />
             </Helmet>
             <div className={styles.layoutBox}>
                 <h1>{t("tools.encodings.linux_permissions.title")}</h1>
