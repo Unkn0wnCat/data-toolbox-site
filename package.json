@@ -37,7 +37,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "tscss": "typed-scss-modules src --watch",
-    "buildServe": "yarn build && serve -s build --ssl-cert ./192.168.1.150.pem --ssl-key ./192.168.1.150-key.pem"
+    "buildServe": "yarn build && serve -s build --ssl-cert ./192.168.1.150.pem --ssl-key ./192.168.1.150-key.pem",
+    "postbuild": "react-snap"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +59,7 @@
     ]
   },
   "devDependencies": {
+    "react-snap": "^1.23.0",
     "serve": "^13.0.2",
     "typed-scss-modules": "^6.4.0"
   }
